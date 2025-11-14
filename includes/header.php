@@ -49,10 +49,6 @@ if ($is_english) {
     ];
 }
 
-$whatsapp_link = sprintf(
-    'https://wa.me/%s',
-    preg_replace('/[^0-9]/', '', WHATSAPP_NUMBER)
-);
 ?>
 <header class="bg-white shadow-md sticky top-0 z-50">
     <nav class="container mx-auto px-4 py-4">
@@ -60,7 +56,7 @@ $whatsapp_link = sprintf(
             <a href="<?php echo $menu_links['home']; ?>" class="font-serif text-2xl text-sangiovese">
                 <?php echo SITE_NAME; ?>
             </a>
-            <ul class="hidden md:flex items-center space-x-8">
+            <ul class="hidden lg:flex items-center gap-6 xl:gap-8">
                 <li>
                     <a href="<?php echo $menu_links['home']; ?>"
                        class="hover:text-sangiovese transition-colors">
@@ -92,12 +88,6 @@ $whatsapp_link = sprintf(
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo $whatsapp_link; ?>" target="_blank" rel="noopener"
-                       class="hover:text-sangiovese transition-colors">
-                        <?php echo t('nav_whatsapp'); ?>
-                    </a>
-                </li>
-                <li>
                     <a href="<?php echo $menu_links['contact']; ?>"
                        class="bg-sangiovese text-cream px-6 py-2 rounded-lg hover:bg-sangiovese/90 transition-all">
                         <?php echo t('nav_contact'); ?>
@@ -115,14 +105,14 @@ $whatsapp_link = sprintf(
                     </a>
                 </li>
             </ul>
-            <button class="md:hidden text-olive" type="button" onclick="toggleMobileMenu()">
+            <button class="lg:hidden text-olive" type="button" onclick="toggleMobileMenu()" aria-expanded="false" aria-controls="mobile-menu">
                 <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                           d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
             </button>
         </div>
-        <ul id="mobile-menu" class="mt-4 hidden flex-col space-y-3 md:hidden">
+        <ul id="mobile-menu" class="mt-4 hidden flex-col space-y-3 lg:hidden rounded-2xl border border-olive/10 bg-white/95 p-4 shadow-xl backdrop-blur">
             <li>
                 <a href="<?php echo $menu_links['home']; ?>" class="block py-2">
                     <?php echo t('nav_home'); ?>
@@ -146,11 +136,6 @@ $whatsapp_link = sprintf(
             <li>
                 <a href="<?php echo $menu_links['blog']; ?>" class="block py-2">
                     <?php echo t('nav_blog'); ?>
-                </a>
-            </li>
-            <li>
-                <a href="<?php echo $whatsapp_link; ?>" target="_blank" rel="noopener" class="block py-2">
-                    <?php echo t('nav_whatsapp'); ?>
                 </a>
             </li>
             <li>

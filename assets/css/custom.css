@@ -1,7 +1,104 @@
 /* Custom overrides for Catering Antipasti */
 
+:root {
+    --color-olive: 92 74 60;
+    --color-sangiovese: 212 112 74;
+    --color-verona: 245 230 211;
+    --color-terracotta: 232 185 68;
+    --color-seagray: 122 140 142;
+    --color-vineyard: 58 90 64;
+    --color-cream: 245 230 211;
+}
+
+/* Palette driven overrides so Tailwind utility classes stay in sync */
+.text-olive {
+    color: rgb(var(--color-olive) / 1) !important;
+}
+
+.text-olive\/90 {
+    color: rgb(var(--color-olive) / 0.9) !important;
+}
+
+.text-olive\/80 {
+    color: rgb(var(--color-olive) / 0.8) !important;
+}
+
+.text-sangiovese,
+.hover\:text-sangiovese:hover {
+    color: rgb(var(--color-sangiovese) / 1) !important;
+}
+
+.text-verona {
+    color: rgb(var(--color-verona) / 1) !important;
+}
+
+.text-cream {
+    color: rgb(var(--color-cream) / 1) !important;
+}
+
+.text-cream\/90 {
+    color: rgb(var(--color-cream) / 0.9) !important;
+}
+
+.text-seagray {
+    color: rgb(var(--color-seagray) / 1) !important;
+}
+
+.bg-verona {
+    background-color: rgb(var(--color-verona) / 1) !important;
+}
+
+.bg-verona\/40 {
+    background-color: rgb(var(--color-verona) / 0.4) !important;
+}
+
+.bg-verona\/60 {
+    background-color: rgb(var(--color-verona) / 0.6) !important;
+}
+
+.hover\:bg-verona:hover {
+    background-color: rgb(var(--color-verona) / 1) !important;
+}
+
+.bg-sangiovese {
+    background-color: rgb(var(--color-sangiovese) / 1) !important;
+}
+
+.hover\:bg-sangiovese\/90:hover {
+    background-color: rgb(var(--color-sangiovese) / 0.9) !important;
+}
+
+.bg-vineyard {
+    background-color: rgb(var(--color-vineyard) / 1) !important;
+}
+
+.bg-terracotta {
+    background-color: rgb(var(--color-terracotta) / 1) !important;
+}
+
+.border-terracotta {
+    border-color: rgb(var(--color-terracotta) / 1) !important;
+}
+
+.border-olive {
+    border-color: rgb(var(--color-olive) / 1) !important;
+}
+
+.border-olive\/10 {
+    border-color: rgb(var(--color-olive) / 0.1) !important;
+}
+
+.border-sangiovese,
+.focus\:border-sangiovese:focus {
+    border-color: rgb(var(--color-sangiovese) / 1) !important;
+}
+
+.border-seagray {
+    border-color: rgb(var(--color-seagray) / 1) !important;
+}
+
 .menu-type-btn {
-    border: 1px solid rgba(92, 74, 60, 0.25);
+    border: 1px solid rgb(var(--color-olive) / 0.25);
 }
 
 .menu-type-btn.active {
@@ -15,7 +112,7 @@
 
 .prose ul li::before {
     content: "•";
-    color: #D4704A;
+    color: rgb(var(--color-sangiovese) / 1);
     display: inline-block;
     width: 1em;
     margin-left: -1em;
@@ -71,8 +168,8 @@
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
-    box-shadow: 0 10px 25px rgba(92, 74, 60, 0.15);
-    color: #5C4A3C;
+    box-shadow: 0 10px 25px rgb(var(--color-olive) / 0.15);
+    color: rgb(var(--color-olive) / 1);
 }
 
 .ready-stat span:last-child {
@@ -107,7 +204,7 @@
     bottom: 1.5rem;
     right: 1.5rem;
     background: #ffffff;
-    color: #5C4A3C;
+    color: rgb(var(--color-olive) / 1);
     border-radius: 1.5rem;
     box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
     max-width: 360px;
@@ -128,7 +225,7 @@
 .cookie-banner__text {
     font-size: 0.95rem;
     line-height: 1.4;
-    color: rgba(92, 74, 60, 0.8);
+    color: rgb(var(--color-olive) / 0.8);
 }
 
 .cookie-banner__actions {
@@ -146,15 +243,15 @@
 }
 
 .cookie-btn--primary {
-    background: #D4704A;
-    color: #F5E6D3;
+    background: rgb(var(--color-sangiovese) / 1);
+    color: rgb(var(--color-cream) / 1);
     border: none;
 }
 
 .cookie-btn--secondary {
     background: transparent;
-    border: 1px solid rgba(92, 74, 60, 0.4);
-    color: #5C4A3C;
+    border: 1px solid rgb(var(--color-olive) / 0.4);
+    color: rgb(var(--color-olive) / 1);
 }
 
 @media (max-width: 640px) {

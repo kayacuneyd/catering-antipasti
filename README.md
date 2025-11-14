@@ -30,6 +30,13 @@ WhatsApp buttons are powered by the helper in `assets/js/main.js`. Update the ph
 - Submits to `api/send-email.php`, which validates input, enforces CSRF, and logs successful enquiries to `logs/inquiries.log`.
 - Responses are localised based on the referer (DE/EN).
 
+## Dynamic Color Palettes
+
+- Brand colors now come from CSS custom properties in `assets/css/custom.css`. Tailwind utility classes such as `bg-sangiovese`, `text-olive`, and `border-terracotta` automatically read from these variables, so updating one variable recolors the entire site.
+- Palette presets live inside `COLOR_PALETTES` in `assets/js/main.js`. Call `window.applyColorPalette('tuscan')` (or add a button with `data-palette="tuscan"`) to swap schemes on the fly; the choice is persisted in `localStorage`.
+- Add new palettes by extending the `COLOR_PALETTES` object (use hex values) and, if needed, set a default palette via `<html data-palette-default="coastal">`.
+- Listen for the `palettechange` event on `document` if components need to react when the theme switches dynamically.
+
 ## File Overview
 
 - `index.php`, `menu.php`, `uber-uns.php`, `kontakt.php`, `impressum.php`, `datenschutz.php`

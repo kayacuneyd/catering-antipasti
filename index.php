@@ -154,17 +154,22 @@
                     <span>Weiterempfehlung</span>
                 </div>
             </div>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="kontakt.php"
-                   class="inline-block bg-sangiovese hover:bg-sangiovese/90 px-10 py-4 rounded-lg text-lg transition-all text-cream">
-                    Jetzt anfragen
-                </a>
-                <button type="button"
-                        class="inline-flex items-center justify-center border-terracotta border-2 gap-2 bg-white/20 hover:bg-white/30 px-10 py-4 rounded-lg text-lg text-olive transition-all"
-                        onclick="whatsappInquiry({ subject: 'Event-Anfrage', details: 'Ich hätte gern ein unverbindliches Angebot.' })">
-                    <?php echo whatsapp_icon('h-5 w-5'); ?>
-                    <span>WhatsApp</span>
-                </button>
+            
+        </div>
+    </section>
+
+    <section class="py-16 bg-vineyard text-cream">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="rounded-3xl bg-white/10 p-10 text-center shadow-xl">
+                <h3 class="font-serif text-3xl mb-4">Interesse an einer ähnlichen Umsetzung?</h3>
+                <p class="text-cream/90 mb-8">Wir entwickeln Konzepte für Business-Events, Hochzeiten und Launches – on-brand und skalierbar.</p>
+                <div class="flex flex-col gap-3 sm:flex-row sm:justify-center">
+                    <a href="kontakt.php" class="bg-white text-olive px-8 py-4 rounded-lg font-semibold">Kontakt aufnehmen</a>
+                    <button type="button" class="bg-transparent border border-white px-8 py-4 rounded-lg inline-flex items-center gap-2" onclick="whatsappInquiry({ subject: 'Referenzen', details: 'Ich interessiere mich für eine ähnliche Umsetzung.' })">
+                        <?php echo whatsapp_icon('h-5 w-5'); ?>
+                        <span>WhatsApp</span>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
