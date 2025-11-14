@@ -39,11 +39,11 @@
         'eyebrow' => 'Team & Story',
         'title' => 'Über uns',
         'description' => 'Seit über 25 Jahren bringen wir die Aromen Italiens nach Baden-Württemberg – immer mit Fokus auf Qualität, Persönlichkeit und einem klaren Verständnis für Markenauftritte.',
-        'container_classes' => 'container mx-auto px-4 max-w-4xl',
+        'container_classes' => 'container mx-auto px-4 max-w-5xl',
     ]);
     ?>
     <section class="py-16 bg-white">
-        <div class="container mx-auto px-4 max-w-4xl">
+        <div class="container mx-auto px-4 max-w-5xl">
             <div class="prose prose-lg mx-auto text-seagray">
                 <p class="text-xl leading-relaxed">
                     Seit über 25 Jahren bringe ich die Aromen Italiens nach Baden-Württemberg.

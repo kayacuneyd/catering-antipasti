@@ -1,6 +1,6 @@
 <?php require_once __DIR__ . '/config.php'; ?>
 <footer class="bg-vineyard text-white py-12">
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto px-4 max-w-7xl">
         <div class="grid gap-8 md:grid-cols-3 mb-8">
             <div>
                 <h4 class="font-serif text-xl mb-4"><?php echo t('footer_contact'); ?></h4>

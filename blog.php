@@ -48,7 +48,7 @@ $posts = blog_posts();
     ?>
 
     <section class="py-16">
-        <div class="container mx-auto px-4">
+        <div class="container mx-auto px-4 max-w-5xl">
             <div class="grid gap-8 md:grid-cols-2">
                 <?php foreach ($posts as $post): ?>
                     <article class="bg-white rounded-2xl shadow-lg p-8 flex flex-col">

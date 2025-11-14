@@ -38,7 +38,7 @@ require_once __DIR__ . '/../includes/menus.php';
 
 <main>
     <section class="py-20 bg-white">
-        <div class="container mx-auto px-4">
+        <div class="container mx-auto px-4 max-w-5xl">
             <div class="max-w-3xl mx-auto text-center mb-12">
                 <h1 class="font-serif text-5xl text-olive mb-6">
                     Our menus
@@ -65,7 +65,7 @@ require_once __DIR__ . '/../includes/menus.php';
             </div>
 
             <div id="preset-menus" class="menu-section">
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
                     <?php foreach ($preset_menus as $menu): ?>
                         <div class="bg-verona p-8 rounded-lg shadow-lg flex flex-col gap-6">
                             <div>

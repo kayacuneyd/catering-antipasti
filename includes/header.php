@@ -51,7 +51,7 @@ if ($is_english) {
 
 ?>
 <header class="bg-white shadow-md sticky top-0 z-50">
-    <nav class="container mx-auto px-4 py-4">
+    <nav class="container mx-auto px-4 py-4 max-w-7xl">
         <div class="flex items-center justify-between">
             <a href="<?php echo $menu_links['home']; ?>" class="font-serif text-2xl text-sangiovese">
                 <?php echo SITE_NAME; ?>

@@ -4,6 +4,7 @@ require_once __DIR__ . '/../includes/references.php';
 
 $references = references_content('en');
 $highlights = $references['highlights'] ?? [];
+$gallery = $references['gallery'] ?? [];
 $testimonials = $references['testimonials'] ?? [];
 ?>
 <!DOCTYPE html>
@@ -67,6 +68,54 @@ $testimonials = $references['testimonials'] ?? [];
             </div>
         </div>
     </section>
+
+    <?php if (!empty($gallery)): ?>
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="flex items-center justify-between mb-10">
+                <div>
+                    <p class="text-xs uppercase tracking-[0.3em] text-sangiovese mb-2">Project gallery</p>
+                    <h2 class="font-serif text-3xl text-olive">Snapshots from recent activations</h2>
+                </div>
+                <a href="contact.php" class="hidden md:inline-flex items-center gap-2 text-sangiovese font-semibold">
+                    Request a quote
+                    <span aria-hidden="true">→</span>
+                </a>
+            </div>
+            <div class="grid gap-8 md:grid-cols-2">
+                <?php foreach ($gallery as $project): ?>
+                    <article class="reference-gallery-card">
+                        <div class="reference-gallery-card__media">
+                            <img src="<?php echo htmlspecialchars($project['image'], ENT_QUOTES, 'UTF-8'); ?>"
+                                 alt="<?php echo htmlspecialchars($project['title'], ENT_QUOTES, 'UTF-8'); ?>"
+                                 loading="lazy">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <p class="text-xs uppercase tracking-[0.3em] text-sangiovese">
+                                <?php echo htmlspecialchars($project['location'], ENT_QUOTES, 'UTF-8'); ?>
+                            </p>
+                            <h3 class="font-serif text-2xl">
+                                <?php echo htmlspecialchars($project['title'], ENT_QUOTES, 'UTF-8'); ?>
+                            </h3>
+                            <p class="text-seagray">
+                                <?php echo htmlspecialchars($project['description'], ENT_QUOTES, 'UTF-8'); ?>
+                            </p>
+                            <?php if (!empty($project['tags'])): ?>
+                                <div class="flex flex-wrap gap-2">
+                                    <?php foreach ($project['tags'] as $tag): ?>
+                                        <span class="reference-gallery-card__tag">
+                                            <?php echo htmlspecialchars($tag, ENT_QUOTES, 'UTF-8'); ?>
+                                        </span>
+                                    <?php endforeach; ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    </article>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+    <?php endif; ?>
 
     <section class="py-16">
         <div class="container mx-auto px-4 max-w-5xl space-y-10">

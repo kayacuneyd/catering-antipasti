@@ -59,87 +59,24 @@
         </div>
     </section>
 
-    <section class="py-20 bg-verona">
-        <div class="container mx-auto px-4">
-            <h2 class="font-serif text-4xl text-center text-olive mb-12">
-                Unsere Leistungen
-            </h2>
-            <p class="text-center text-seagray max-w-3xl mx-auto mb-12">
-                Modulare Leistungspakete – von Strategie und Ablaufregie bis zur Umsetzung vor Ort.
-            </p>
-            <?php
-            $services = [
-                [
-                    'icon' => '🍽️',
-                    'title' => 'Business Catering',
-                    'text' => 'Workshops, Offsites und Führungskräftedialoge mit klarer Dramaturgie.',
-                    'bullets' => ['Brandgerechte Buffetgestaltung', 'On-site Küchencrew'],
-                ],
-                [
-                    'icon' => '💍',
-                    'title' => 'Hochzeiten & Feiern',
-                    'text' => 'Mehrgängige Menüs, Flying Buffet und Aperitivo-Bar für besondere Momente.',
-                    'bullets' => ['Signature Aperitivo-Station', 'Dessertinseln & Live-Cooking'],
-                ],
-                [
-                    'icon' => '🍷',
-                    'title' => 'Weinverkostungen',
-                    'text' => 'Geführte Tastings mit Sommelier-Begleitung und abgestimmten Antipasti.',
-                    'bullets' => ['Handverlesene Winzer', 'Sensorische Moderation'],
-                ],
-                [
-                    'icon' => '🚀',
-                    'title' => 'Produktlaunches',
-                    'text' => 'Inszenierte Food-Storys inklusive Branding, Technik und Projektsteuerung.',
-                    'bullets' => ['CI-konforme Displays', 'Storytelling & Scripts'],
-                ],
-                [
-                    'icon' => '🏡',
-                    'title' => 'Private Dining',
-                    'text' => 'Chef’s Table-Erlebnisse und intime Jubiläen im kleinen Kreis.',
-                    'bullets' => ['Live vor Ort gekocht', 'Menu Cards & Floristikpartner'],
-                ],
-                [
-                    'icon' => '📦',
-                    'title' => 'Beratung & Logistik',
-                    'text' => 'Planung, Mietmöbel und Timings – wir denken den Ablauf ganzheitlich.',
-                    'bullets' => ['360° Projektsteuerung', 'Netzwerk aus Eventpartnern'],
-                ],
-            ];
-            ?>
-            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
-                <?php foreach ($services as $service): ?>
-                    <div class="bg-white p-8 rounded-2xl shadow-lg service-card">
-                        <div class="text-5xl mb-4" aria-hidden="true"><?php echo htmlspecialchars($service['icon'], ENT_QUOTES, 'UTF-8'); ?></div>
-                        <h3 class="font-serif text-2xl text-sangiovese mb-3">
-                            <?php echo htmlspecialchars($service['title'], ENT_QUOTES, 'UTF-8'); ?>
-                        </h3>
-                        <p class="text-seagray mb-4">
-                            <?php echo htmlspecialchars($service['text'], ENT_QUOTES, 'UTF-8'); ?>
-                        </p>
-                        <ul class="text-sm text-seagray space-y-1">
-                            <?php foreach ($service['bullets'] as $bullet): ?>
-                                <li>• <?php echo htmlspecialchars($bullet, ENT_QUOTES, 'UTF-8'); ?></li>
-                            <?php endforeach; ?>
-                        </ul>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-verona text-white text-center ready-highlight">
-        <div class="container mx-auto px-4 ready-highlight__content">
+    <section class="py-20 bg-verona text-center">
+        <div class="container mx-auto px-4 max-w-5xl ready-highlight__content">
             <div class="mb-10 inline-flex items-center gap-3 bg-white/10 px-6 py-2 rounded-full text-sm ready-badge">
                 <span class="w-2 h-2 rounded-full bg-terracotta animate-ping"></span>
                 <span>48-Stunden-Angebot & persönliche Betreuung</span>
             </div>
-            <h2 class="font-serif text-4xl mb-6 text-white">
+            <h2 class="font-serif text-4xl mb-6">
                 Bereit für Ihr nächstes Event?
             </h2>
-            <p class="text-xl mb-8 text-white max-w-2xl mx-auto">
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Ob Sie ein C-Level-Offsite, eine Hochzeit oder einen Markenlaunch planen: Wir orchestrieren Küche,
+                Service und Ablauf dramaturgisch durchdacht und verankern Ihre Botschaften im gesamten Erlebnis.
                 Kontaktieren Sie uns für ein unverbindliches Angebot – wir liefern Ideen, Ablaufpläne und Budget in einem Dokument.
             </p>
+            <div class="text-xl mb-8 max-w-2xl mx-auto">
+                Unser Team begleitet Sie von der ersten Idee über Moodboards und Menüproben bis zum letzten Espresso
+                am Eventtag – mit klaren Timings und persönlicher Betreuung von Hasan Geray.
+            </div>
             <div class="flex flex-wrap gap-6 justify-center mb-10">
                 <div class="ready-stat">
                     <span class="text-4xl font-serif">25+</span>
@@ -158,11 +95,83 @@
         </div>
     </section>
 
-    <section class="py-16 bg-vineyard text-cream">
+    <section class="py-20 bg-verona">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="font-serif text-4xl text-center text-olive mb-12">
+                Unsere Leistungen
+            </h2>
+            <p class="text-center text-seagray max-w-3xl mx-auto mb-12">
+                Modulare Leistungspakete – von Strategie und Ablaufregie bis zur Umsetzung vor Ort.
+            </p>
+            <?php
+            $services = [
+                [
+                    'title' => 'Business Catering',
+                    'text' => 'Workshops, Offsites und Führungskräftedialoge mit klarer Dramaturgie.',
+                    'bullets' => ['Brandgerechte Buffetgestaltung', 'On-site Küchencrew'],
+                    'image' => 'https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=1200&q=80',
+                ],
+                [
+                    'title' => 'Hochzeiten & Feiern',
+                    'text' => 'Mehrgängige Menüs, Flying Buffet und Aperitivo-Bar für besondere Momente.',
+                    'bullets' => ['Signature Aperitivo-Station', 'Dessertinseln & Live-Cooking'],
+                    'image' => 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80',
+                ],
+                [
+                    'title' => 'Weinverkostungen',
+                    'text' => 'Geführte Tastings mit Sommelier-Begleitung und abgestimmten Antipasti.',
+                    'bullets' => ['Handverlesene Winzer', 'Sensorische Moderation'],
+                    'image' => 'https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1200&q=80',
+                ],
+                [
+                    'title' => 'Produktlaunches',
+                    'text' => 'Inszenierte Food-Storys inklusive Branding, Technik und Projektsteuerung.',
+                    'bullets' => ['CI-konforme Displays', 'Storytelling & Scripts'],
+                    'image' => 'https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1200&q=80',
+                ],
+                [
+                    'title' => 'Private Dining',
+                    'text' => 'Chef’s Table-Erlebnisse und intime Jubiläen im kleinen Kreis.',
+                    'bullets' => ['Live vor Ort gekocht', 'Menu Cards & Floristikpartner'],
+                    'image' => 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80',
+                ],
+                [
+                    'title' => 'Beratung & Logistik',
+                    'text' => 'Planung, Mietmöbel und Timings – wir denken den Ablauf ganzheitlich.',
+                    'bullets' => ['360° Projektsteuerung', 'Netzwerk aus Eventpartnern'],
+                    'image' => 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80',
+                ],
+            ];
+            ?>
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
+                <?php foreach ($services as $service): ?>
+                    <div class="service-card rounded-2xl shadow-lg min-h-[320px]">
+                        <div class="service-card__background" style="background-image: url('<?php echo htmlspecialchars($service['image'], ENT_QUOTES, 'UTF-8'); ?>');"></div>
+                        <div class="service-card__overlay"></div>
+                        <div class="service-card__content p-8 flex flex-col gap-4">
+                            <h3 class="font-serif text-2xl text-white mb-1">
+                                <?php echo htmlspecialchars($service['title'], ENT_QUOTES, 'UTF-8'); ?>
+                            </h3>
+                            <p class="text-white/80">
+                                <?php echo htmlspecialchars($service['text'], ENT_QUOTES, 'UTF-8'); ?>
+                            </p>
+                            <ul class="text-sm text-white/90 space-y-1">
+                                <?php foreach ($service['bullets'] as $bullet): ?>
+                                    <li>• <?php echo htmlspecialchars($bullet, ENT_QUOTES, 'UTF-8'); ?></li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20">
         <div class="container mx-auto px-4 max-w-4xl">
-            <div class="rounded-3xl bg-white/10 p-10 text-center shadow-xl">
+            <div class="rounded-3xl bg-vineyard/10 p-10 text-center shadow-xl">
                 <h3 class="font-serif text-3xl mb-4">Interesse an einer ähnlichen Umsetzung?</h3>
-                <p class="text-cream/90 mb-8">Wir entwickeln Konzepte für Business-Events, Hochzeiten und Launches – on-brand und skalierbar.</p>
+                <p class="mb-8">Wir entwickeln Konzepte für Business-Events, Hochzeiten und Launches – on-brand und skalierbar.</p>
                 <div class="flex flex-col gap-3 sm:flex-row sm:justify-center">
                     <a href="kontakt.php" class="bg-white text-olive px-8 py-4 rounded-lg font-semibold">Kontakt aufnehmen</a>
                     <button type="button" class="bg-transparent border border-white px-8 py-4 rounded-lg inline-flex items-center gap-2" onclick="whatsappInquiry({ subject: 'Referenzen', details: 'Ich interessiere mich für eine ähnliche Umsetzung.' })">

@@ -40,7 +40,7 @@ $posts = blog_posts('en');
 
 <main>
     <section class="py-20">
-        <div class="container mx-auto px-4">
+        <div class="container mx-auto px-4 max-w-5xl">
             <div class="max-w-3xl mb-12">
                 <p class="uppercase tracking-[0.3em] text-xs text-sangiovese mb-4">Insights</p>
                 <h1 class="font-serif text-5xl mb-6">Catering stories & strategy</h1>

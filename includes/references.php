@@ -10,6 +10,29 @@ function get_default_references_data(): array
                 ['label' => 'Durchschnittliche Gäste', 'value' => '80-400'],
                 ['label' => 'Weiterempfehlung', 'value' => '98%'],
             ],
+            'gallery' => [
+                [
+                    'title' => 'Leadership Offsite @ Design Tech Campus',
+                    'location' => 'Stuttgart',
+                    'description' => 'Mediterrane Lunch Formate, Espresso Bar und abendlicher Tasting Table für 80 Führungskräfte.',
+                    'image' => 'https://images.unsplash.com/photo-1528712306091-ed0763094c98?auto=format&fit=crop&w=1200&q=80',
+                    'tags' => ['Business Catering', 'Live Cooking'],
+                ],
+                [
+                    'title' => 'Sommerhochzeit im Maison Palmengarten',
+                    'location' => 'Kornwestheim',
+                    'description' => 'Aperitivo-Station, Pasta-Manufaktur und Dessertinseln unter freiem Himmel.',
+                    'image' => 'https://images.unsplash.com/photo-1520854223477-858bda993f53?auto=format&fit=crop&w=1200&q=80',
+                    'tags' => ['Wedding', 'Aperitivo'],
+                ],
+                [
+                    'title' => 'Launch Event für Elektro-SUV',
+                    'location' => 'Tübingen',
+                    'description' => 'Gebrandete Food Stations, vegane Degustation und Signature Cocktails.',
+                    'image' => 'https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=1200&q=80',
+                    'tags' => ['Produktlaunch', 'Brand Activation'],
+                ],
+            ],
             'testimonials' => [
                 [
                     'title' => 'Firmenjubiläum in Stuttgart',
@@ -51,6 +74,29 @@ function get_default_references_data(): array
                 ['label' => 'Events / year', 'value' => '120+'],
                 ['label' => 'Guest range', 'value' => '80-400'],
                 ['label' => 'Referral rate', 'value' => '98%'],
+            ],
+            'gallery' => [
+                [
+                    'title' => 'Leadership offsite @ Design Tech Campus',
+                    'location' => 'Stuttgart',
+                    'description' => 'Mediterranean lunches, espresso bar and an evening tasting table for 80 executives.',
+                    'image' => 'https://images.unsplash.com/photo-1528712306091-ed0763094c98?auto=format&fit=crop&w=1200&q=80',
+                    'tags' => ['Corporate', 'Live cooking'],
+                ],
+                [
+                    'title' => 'Summer wedding at Maison Palmengarten',
+                    'location' => 'Kornwestheim',
+                    'description' => 'Aperitivo station, pasta atelier and dessert islands under the stars.',
+                    'image' => 'https://images.unsplash.com/photo-1520854223477-858bda993f53?auto=format&fit=crop&w=1200&q=80',
+                    'tags' => ['Wedding', 'Aperitivo'],
+                ],
+                [
+                    'title' => 'Electric SUV launch experience',
+                    'location' => 'Tübingen',
+                    'description' => 'Branded food stations, vegan degustation and signature cocktails.',
+                    'image' => 'https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=1200&q=80',
+                    'tags' => ['Product launch', 'Brand activation'],
+                ],
             ],
             'testimonials' => [
                 [
