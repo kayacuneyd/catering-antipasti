@@ -35,7 +35,7 @@
 
 <main>
     <?php ob_start(); ?>
-    <div class="flex flex-col sm:flex-row sm:items-center gap-4 mt-8">
+    <div class="flex flex-col sm:flex-row sm:items-center gap-4 mt-8 max-w-5xl">
         <button type="button"
                 class="inline-flex items-center justify-center gap-2 rounded-lg bg-white/10 px-5 py-3 text-white font-semibold hover:bg-white/20 transition-all"
                 onclick="whatsappInquiry({ subject: 'Kontaktanfrage', details: 'Bitte melden Sie sich zurück.' })">
