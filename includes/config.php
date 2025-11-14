@@ -97,3 +97,63 @@ function whatsapp_icon(string $classes = 'h-5 w-5'): string
         . '<path fill="currentColor" d="M16 3C9.38 3 3.86 8.53 3.86 15.14c0 2.64.78 5.06 2.14 7.13L3 29l6.7-2c1.94 1.05 4.18 1.64 6.3 1.64 6.62 0 12.14-5.53 12.14-12.14C28.14 8.53 22.62 3 16 3zm0 2.14c5.53 0 10 4.47 10 10s-4.47 10-10 10c-2.03 0-3.98-.62-5.64-1.74l-.43-.28-3.97 1.15 1.16-3.86-.28-.43a9.86 9.86 0 01-1.71-5.84c0-5.53 4.47-10 10-10zm-4.62 4.5a.7.7 0 00-.44.21c-.15.16-.6.58-.6 1.41 0 .83.61 1.64.7 1.76.09.12 1.2 1.9 2.86 2.7 1.39.69 1.87.76 2.2.67.34-.09 1.08-.45 1.23-.88.15-.42.15-.79.11-.87-.04-.09-.18-.13-.36-.2-.19-.09-1.13-.53-1.31-.59-.18-.06-.3-.09-.42.08-.12.16-.48.6-.6.72-.12.13-.22.15-.4.06-.19-.09-.8-.3-1.52-.94-.57-.5-.95-1.13-1.06-1.32-.12-.2-.01-.3.08-.39.09-.09.19-.22.29-.32.09-.11.13-.17.19-.28.06-.12.04-.24 0-.32-.04-.09-.42-1.05-.58-1.44-.16-.39-.32-.34-.44-.34z"/>'
         . '</svg>';
 }
+
+/**
+ * Render a consistent hero section used across static pages.
+ *
+ * @param array{
+ *     eyebrow?: string,
+ *     title?: string,
+ *     description?: string,
+ *     body?: string,
+ *     section_classes?: string,
+ *     container_classes?: string,
+ *     eyebrow_classes?: string,
+ *     title_classes?: string,
+ *     description_classes?: string
+ * } $options
+ */
+function render_page_hero(array $options = []): void
+{
+    $defaults = [
+        'section_classes' => 'bg-vineyard text-cream py-20',
+        'container_classes' => 'container mx-auto px-4 max-w-5xl',
+        'eyebrow_classes' => 'uppercase tracking-[0.4em] text-xs text-verona mb-3',
+        'title_classes' => 'font-serif text-5xl mb-6',
+        'description_classes' => 'text-cream/90 text-lg max-w-3xl',
+    ];
+
+    $settings = array_merge($defaults, $options);
+    $section_classes = htmlspecialchars($settings['section_classes'], ENT_QUOTES, 'UTF-8');
+    $container_classes = htmlspecialchars($settings['container_classes'], ENT_QUOTES, 'UTF-8');
+    $eyebrow_classes = htmlspecialchars($settings['eyebrow_classes'], ENT_QUOTES, 'UTF-8');
+    $title_classes = htmlspecialchars($settings['title_classes'], ENT_QUOTES, 'UTF-8');
+    $description_classes = htmlspecialchars($settings['description_classes'], ENT_QUOTES, 'UTF-8');
+
+    $eyebrow = $settings['eyebrow'] ?? '';
+    $title = $settings['title'] ?? '';
+    $description = $settings['description'] ?? '';
+    $body = $settings['body'] ?? '';
+
+    echo '<section class="' . $section_classes . '">';
+    echo '<div class="' . $container_classes . '">';
+
+    if ($eyebrow !== '') {
+        echo '<p class="' . $eyebrow_classes . '">' . htmlspecialchars($eyebrow, ENT_QUOTES, 'UTF-8') . '</p>';
+    }
+
+    if ($title !== '') {
+        echo '<h1 class="' . $title_classes . '">' . htmlspecialchars($title, ENT_QUOTES, 'UTF-8') . '</h1>';
+    }
+
+    if ($description !== '') {
+        echo '<p class="' . $description_classes . '">' . htmlspecialchars($description, ENT_QUOTES, 'UTF-8') . '</p>';
+    }
+
+    if (!empty($body)) {
+        echo $body;
+    }
+
+    echo '</div>';
+    echo '</section>';
+}

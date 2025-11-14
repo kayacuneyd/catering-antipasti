@@ -34,12 +34,16 @@
 <?php include __DIR__ . '/includes/header.php'; ?>
 
 <main>
-    <section class="py-20 bg-white">
+    <?php
+    render_page_hero([
+        'eyebrow' => 'Team & Story',
+        'title' => 'Über uns',
+        'description' => 'Seit über 25 Jahren bringen wir die Aromen Italiens nach Baden-Württemberg – immer mit Fokus auf Qualität, Persönlichkeit und einem klaren Verständnis für Markenauftritte.',
+        'container_classes' => 'container mx-auto px-4 max-w-4xl',
+    ]);
+    ?>
+    <section class="py-16 bg-white">
         <div class="container mx-auto px-4 max-w-4xl">
-            <h1 class="font-serif text-5xl text-center text-olive mb-12">
-                Über uns
-            </h1>
-
             <div class="prose prose-lg mx-auto text-seagray">
                 <p class="text-xl leading-relaxed">
                     Seit über 25 Jahren bringe ich die Aromen Italiens nach Baden-Württemberg.

@@ -34,11 +34,16 @@
 <?php include __DIR__ . '/includes/header.php'; ?>
 
 <main>
-    <section class="py-20 bg-white">
+    <?php
+    render_page_hero([
+        'eyebrow' => 'Rechtliches',
+        'title' => 'Impressum',
+        'description' => 'Verantwortliche Angaben, Kontaktwege und rechtliche Hinweise zu Catering Antipasti.',
+        'container_classes' => 'container mx-auto px-4 max-w-4xl',
+    ]);
+    ?>
+    <section class="py-16 bg-white">
         <div class="container mx-auto px-4 max-w-4xl">
-            <h1 class="font-serif text-5xl text-center text-olive mb-12">
-                Impressum
-            </h1>
             <div class="prose prose-lg mx-auto text-seagray">
                 <h2>Angaben gemäß § 5 TMG</h2>
                 <p>

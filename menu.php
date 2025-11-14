@@ -37,18 +37,15 @@ require_once __DIR__ . '/includes/menus.php';
 <?php include __DIR__ . '/includes/header.php'; ?>
 
 <main>
-    <section class="py-20 bg-white">
+    <?php
+    render_page_hero([
+        'eyebrow' => 'Menüs',
+        'title' => 'Unsere Menüs',
+        'description' => 'Wählen Sie aus kuratierten Empfehlungen oder kombinieren Sie individuelle Lieblingsgerichte. Alle Zusammenstellungen sind flexibel und werden gemeinsam mit Ihnen finalisiert.',
+    ]);
+    ?>
+    <section class="py-16 bg-white">
         <div class="container mx-auto px-4">
-            <div class="max-w-3xl mx-auto text-center mb-12">
-                <h1 class="font-serif text-5xl text-olive mb-6">
-                    Unsere Menüs
-                </h1>
-                <p class="text-lg text-seagray">
-                    Wählen Sie aus kuratierten Empfehlungen oder kombinieren Sie individuelle Lieblingsgerichte.
-                    Alle Zusammenstellungen sind flexibel und werden gemeinsam mit Ihnen finalisiert.
-                </p>
-            </div>
-
             <div class="flex justify-center gap-4 mb-12">
                 <button type="button"
                         onclick="showMenuType('preset')"

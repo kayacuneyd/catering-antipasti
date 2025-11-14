@@ -34,11 +34,16 @@
 <?php include __DIR__ . '/includes/header.php'; ?>
 
 <main>
-    <section class="py-20 bg-white">
+    <?php
+    render_page_hero([
+        'eyebrow' => 'Rechtliches',
+        'title' => 'Datenschutzerklärung',
+        'description' => 'Hier finden Sie alle Informationen zur Verarbeitung Ihrer personenbezogenen Daten, zu Kontaktwegen sowie zu Ihren Rechten.',
+        'container_classes' => 'container mx-auto px-4 max-w-4xl',
+    ]);
+    ?>
+    <section class="py-16 bg-white">
         <div class="container mx-auto px-4 max-w-4xl">
-            <h1 class="font-serif text-5xl text-center text-olive mb-12">
-                Datenschutzerklärung
-            </h1>
             <div class="prose prose-lg mx-auto text-seagray">
                 <h2>1. Datenschutz auf einen Blick</h2>
                 <p>

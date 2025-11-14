@@ -39,16 +39,16 @@ $posts = blog_posts();
 <?php include __DIR__ . '/includes/header.php'; ?>
 
 <main>
-    <section class="py-20">
-        <div class="container mx-auto px-4">
-            <div class="max-w-3xl mb-12">
-                <p class="uppercase tracking-[0.3em] text-xs text-sangiovese mb-4">Insights</p>
-                <h1 class="font-serif text-5xl mb-6">Catering Stories & Strategien</h1>
-                <p class="text-lg text-seagray">
-                    Aktuelle Projekte, Learnings aus 25+ Jahren Catering und Inspirationen für Ihr Event.
-                </p>
-            </div>
+    <?php
+    render_page_hero([
+        'eyebrow' => 'Insights',
+        'title' => 'Catering Stories & Strategien',
+        'description' => 'Aktuelle Projekte, Learnings aus 25+ Jahren Catering und Inspirationen für Ihr Event.',
+    ]);
+    ?>
 
+    <section class="py-16">
+        <div class="container mx-auto px-4">
             <div class="grid gap-8 md:grid-cols-2">
                 <?php foreach ($posts as $post): ?>
                     <article class="bg-white rounded-2xl shadow-lg p-8 flex flex-col">
