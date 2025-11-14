@@ -7,11 +7,21 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-define('SITE_NAME', 'Catering Antipasti');
-define('SITE_EMAIL', 'info@catering-antipasti.de');
-define('ADMIN_EMAIL', 'hasan@catering-antipasti.de');
+$settings_path = dirname(__DIR__) . '/data/settings.json';
+$settings_data = [];
+if (is_readable($settings_path)) {
+    $decoded = json_decode(file_get_contents($settings_path), true);
+    if (is_array($decoded)) {
+        $settings_data = $decoded;
+    }
+}
+
+define('SITE_NAME', $settings_data['site_title'] ?? 'Catering Antipasti');
+define('SITE_EMAIL', $settings_data['contact_email'] ?? 'info@catering-antipasti.de');
+define('ADMIN_EMAIL', $settings_data['contact_email'] ?? 'hasan@catering-antipasti.de');
 define('SITE_URL', 'https://catering-antipasti.de');
-define('WHATSAPP_NUMBER', '+4915123456789');
+define('WHATSAPP_NUMBER', $settings_data['whatsapp'] ?? '+4915123456789');
+define('MAINTENANCE_MODE', !empty($settings_data['maintenance_mode']));
 
 $current_page = basename($_SERVER['PHP_SELF']);
 $is_english = strpos($_SERVER['REQUEST_URI'], '/en/') !== false;
