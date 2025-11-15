@@ -9,6 +9,10 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^en$ en/ [R=301,L]
 
+# Redirect /index -> /
+RewriteCond %{REQUEST_URI} ^/index/?$ [NC]
+RewriteRule ^ / [R=301,L]
+
 # Redirect direct PHP requests (outside admin/api/assets/logs) to clean URLs
 RewriteCond %{REQUEST_URI} !^/admin
 RewriteCond %{REQUEST_URI} !^/api
