@@ -159,7 +159,7 @@ $testimonials = $references['testimonials'] ?? [];
 
     <section class="py-16">
         <div class="container mx-auto px-4 max-w-4xl">
-            <div class="rounded-3xl text-cream p-10 text-center shadow-xl bg-vineyard/30">
+            <div class="rounded-3xl text-cream p-10 text-center shadow-xl bg-vineyard">
                 <h3 class="font-serif text-3xl mb-4 text-cream">Ready for a similar result?</h3>
                 <p class="text-xl mb-8">We build brand-aligned catering concepts for corporate events, weddings and launches.</p>
                 <div class="flex flex-col gap-3 sm:flex-row sm:justify-center">
