@@ -68,7 +68,7 @@ $testimonials = $references['testimonials'] ?? [];
     </section>
 
     <?php if (!empty($gallery)): ?>
-    <section class="py-16 bg-white">
+    <section class="py-16 bg-verona/40">
         <div class="container mx-auto px-4 max-w-5xl">
             <div class="flex items-center justify-between mb-10">
                 <div>
@@ -157,11 +157,11 @@ $testimonials = $references['testimonials'] ?? [];
         </div>
     </section>
 
-    <section class="py-16 bg-vineyard text-cream">
+    <section class="py-16">
         <div class="container mx-auto px-4 max-w-4xl">
             <div class="rounded-3xl bg-white/10 p-10 text-center shadow-xl">
                 <h3 class="font-serif text-3xl mb-4">Ready for a similar result?</h3>
-                <p class="text-cream/90 mb-8">We build brand-aligned catering concepts for corporate events, weddings and launches.</p>
+                <p class="mb-8">We build brand-aligned catering concepts for corporate events, weddings and launches.</p>
                 <div class="flex flex-col gap-3 sm:flex-row sm:justify-center">
                     <a href="contact.php" class="bg-white text-olive px-8 py-4 rounded-lg font-semibold">Contact us</a>
                     <button type="button" class="bg-transparent border border-white px-8 py-4 rounded-lg inline-flex items-center gap-2" onclick="whatsappInquiry({ subject: 'References', details: 'I would like to learn more about your case studies.' })">
