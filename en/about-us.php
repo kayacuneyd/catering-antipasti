@@ -43,7 +43,7 @@
     ]);
     ?>
     <section class="py-16 bg-verona/40">
-        <div class="container mx-auto px-4 max-w-6xl">
+        <div class="container mx-auto px-4 max-w-5xl">
             <div class="grid gap-12 lg:grid-cols-[1.4fr_1fr] items-center">
                 <div class="prose prose-lg text-seagray max-w-none">
                     <p class="text-xl leading-relaxed">
