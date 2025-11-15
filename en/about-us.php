@@ -34,12 +34,16 @@
 <?php include __DIR__ . '/../includes/header.php'; ?>
 
 <main>
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <h1 class="font-serif text-5xl text-center text-olive mb-12">
-                About us
-            </h1>
-
+    <?php
+    render_page_hero([
+        'eyebrow' => 'Team & Story',
+        'title' => 'About us',
+        'description' => 'For more than 25 years we have carried the flavours of Italy through Baden-Württemberg – with a focus on quality, personality and on-brand experiences.',
+        'container_classes' => 'container mx-auto px-4 max-w-5xl',
+    ]);
+    ?>
+    <section class="py-16 bg-verona/40">
+        <div class="container mx-auto px-4 max-w-5xl">
             <div class="prose prose-lg mx-auto text-seagray">
                 <p class="text-xl leading-relaxed">
                     For more than 25 years I have been bringing the flavours of Italy to Baden-Württemberg.
