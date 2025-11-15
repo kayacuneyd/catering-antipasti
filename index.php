@@ -167,21 +167,6 @@
         </div>
     </section>
 
-    <section class="py-20">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <div class="rounded-3xl bg-vineyard/10 p-10 text-center shadow-xl">
-                <h3 class="font-serif text-3xl mb-4">Interesse an einer ähnlichen Umsetzung?</h3>
-                <p class="mb-8">Wir entwickeln Konzepte für Business-Events, Hochzeiten und Launches – on-brand und skalierbar.</p>
-                <div class="flex flex-col gap-3 sm:flex-row sm:justify-center">
-                    <a href="kontakt.php" class="bg-white text-olive px-8 py-4 rounded-lg font-semibold">Kontakt aufnehmen</a>
-                    <button type="button" class="bg-transparent border border-white px-8 py-4 rounded-lg inline-flex items-center gap-2" onclick="whatsappInquiry({ subject: 'Referenzen', details: 'Ich interessiere mich für eine ähnliche Umsetzung.' })">
-                        <?php echo whatsapp_icon('h-5 w-5'); ?>
-                        <span>WhatsApp</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
 </main>
 
 <?php include __DIR__ . '/includes/footer.php'; ?>

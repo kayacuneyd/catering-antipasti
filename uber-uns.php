@@ -42,7 +42,7 @@
         'container_classes' => 'container mx-auto px-4 max-w-5xl',
     ]);
     ?>
-    <section class="py-16 bg-white">
+    <section class="py-16 bg-verona/40">
         <div class="container mx-auto px-4 max-w-5xl">
             <div class="prose prose-lg mx-auto text-seagray">
                 <p class="text-xl leading-relaxed">
@@ -63,11 +63,11 @@
                 <h2 class="font-serif text-3xl text-sangiovese mt-8 mb-4">
                     Unser Versprechen
                 </h2>
-                <ul class="space-y-3">
-                    <li>✓ Authentische italienische Rezepte mit regionalen Zutaten</li>
-                    <li>✓ Persönlicher Service vom Chef höchstpersönlich</li>
-                    <li>✓ Flexible Menüs für 20 bis 1000 Gäste</li>
-                    <li>✓ 48-Stunden-Angebot-Garantie</li>
+                <ul class="space-y-3 list-none">
+                    <li>Authentische italienische Rezepte mit regionalen Zutaten</li>
+                    <li>Persönlicher Service vom Chef höchstpersönlich</li>
+                    <li>Flexible Menüs für 20 bis 1000 Gäste</li>
+                    <li>48-Stunden-Angebot-Garantie</li>
                 </ul>
 
                 <div class="mt-10">

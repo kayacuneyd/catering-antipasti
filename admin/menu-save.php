@@ -46,24 +46,44 @@ if ($type === 'preset') {
         $key = slugify($_POST['key'] ?? '');
     }
     $label = trim($_POST['label'] ?? '');
-    $itemsRaw = trim($_POST['items'] ?? '');
-    if ($key === '' || $label === '' || $itemsRaw === '') {
+
+    if ($key === '' || $label === '') {
         redirect_with_message('menu-new.php?lang=' . $lang . '&type=category', 'Tüm alanlar zorunludur.', 'error');
     }
-    $lines = array_filter(array_map('trim', preg_split('/\r?\n/', $itemsRaw)));
+
+    $itemNames = $_POST['item_name'] ?? null;
+    $itemDescriptions = $_POST['item_description'] ?? null;
     $items = [];
-    foreach ($lines as $line) {
-        [$title, $desc] = array_pad(explode('|', $line, 2), 2, '');
-        $title = trim($title);
-        $desc = trim($desc);
-        if ($title === '') {
-            continue;
+
+    if (is_array($itemNames) && is_array($itemDescriptions)) {
+        foreach ($itemNames as $index => $title) {
+            $title = trim((string) $title);
+            $desc = trim((string) ($itemDescriptions[$index] ?? ''));
+            if ($title === '') {
+                continue;
+            }
+            $items[] = ['name' => $title, 'description' => $desc];
         }
-        $items[] = ['name' => $title, 'description' => $desc];
     }
+
+    if (empty($items)) {
+        $itemsRaw = trim($_POST['items'] ?? '');
+        $lines = array_filter(array_map('trim', preg_split('/\r?\n/', $itemsRaw)));
+        foreach ($lines as $line) {
+            [$title, $desc] = array_pad(explode('|', $line, 2), 2, '');
+            $title = trim($title);
+            $desc = trim($desc);
+            if ($title === '') {
+                continue;
+            }
+            $items[] = ['name' => $title, 'description' => $desc];
+        }
+    }
+
     if (empty($items)) {
         redirect_with_message('menu-new.php?lang=' . $lang . '&type=category', 'En az bir öğe girmelisiniz.', 'error');
     }
+
     $menus[$lang]['categories'][$key] = ['label' => $label, 'items' => $items];
 }
 

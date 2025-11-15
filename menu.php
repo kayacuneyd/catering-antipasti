@@ -44,7 +44,7 @@ require_once __DIR__ . '/includes/menus.php';
         'description' => 'Wählen Sie aus kuratierten Empfehlungen oder kombinieren Sie individuelle Lieblingsgerichte. Alle Zusammenstellungen sind flexibel und werden gemeinsam mit Ihnen finalisiert.',
     ]);
     ?>
-    <section class="py-16 bg-white">
+    <section class="py-16 bg-verona/40">
         <div class="container mx-auto px-4 max-w-5xl">
             <div class="flex justify-center gap-4 mb-12">
                 <button type="button"
@@ -64,7 +64,7 @@ require_once __DIR__ . '/includes/menus.php';
             <div id="preset-menus" class="menu-section">
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
                     <?php foreach ($preset_menus as $menu): ?>
-                        <div class="bg-verona p-8 rounded-lg shadow-lg flex flex-col gap-6">
+                        <div class="bg-white p-8 rounded-lg shadow-lg flex flex-col gap-6">
                             <div>
                                 <h3 class="font-serif text-2xl text-sangiovese mb-2">
                                     <?php echo htmlspecialchars($menu['name'], ENT_QUOTES, 'UTF-8'); ?>

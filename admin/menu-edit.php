@@ -41,30 +41,30 @@ $page_title = ($type === 'category' ? 'Kategori' : 'Menü') . ' Düzenle';
                 <label class="block text-sm font-semibold text-gray-600 mb-2">Açıklama</label>
                 <textarea name="description" rows="3" class="w-full rounded-lg border border-gray-300 px-4 py-3"><?= htmlspecialchars($entry['description'] ?? '') ?></textarea>
             </div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-600 mb-2">Öğeler</label>
+                <textarea name="items" rows="8" class="w-full rounded-lg border border-gray-300 px-4 py-3"><?php
+                    $items = $entry['items'] ?? [];
+                    $lines = [];
+                    foreach ($items as $item) {
+                        $lines[] = is_array($item) && isset($item['description']) && $item['description'] !== ''
+                            ? trim(($item['name'] ?? '') . ' | ' . $item['description'])
+                            : trim(is_array($item) ? ($item['name'] ?? '') : $item);
+                    }
+                    echo htmlspecialchars(implode("\n", array_filter($lines)));
+                ?></textarea>
+            </div>
         <?php else: ?>
             <input type="hidden" name="key" value="<?= htmlspecialchars($key) ?>">
             <div>
                 <label class="block text-sm font-semibold text-gray-600 mb-2">Görünen Başlık</label>
                 <input type="text" name="label" required value="<?= htmlspecialchars($entry['label'] ?? '') ?>" class="w-full rounded-lg border border-gray-300 px-4 py-3">
             </div>
+            <?php
+            $categoryItems = $entry['items'] ?? [];
+            include __DIR__ . '/partials/category-items-fields.php';
+            ?>
         <?php endif; ?>
-        <div>
-            <label class="block text-sm font-semibold text-gray-600 mb-2">Öğeler</label>
-            <textarea name="items" rows="8" class="w-full rounded-lg border border-gray-300 px-4 py-3"><?php
-                $items = $entry['items'] ?? [];
-                $lines = [];
-                foreach ($items as $item) {
-                    if (is_array($item)) {
-                        $name = trim($item['name'] ?? '');
-                        $desc = trim($item['description'] ?? '');
-                        $lines[] = $desc !== '' ? ($name . ' | ' . $desc) : $name;
-                    } else {
-                        $lines[] = $item;
-                    }
-                }
-                echo htmlspecialchars(implode("\n", array_map('trim', $lines)));
-            ?></textarea>
-        </div>
         <button class="w-full rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 py-3 text-lg font-semibold text-white">Güncelle</button>
     </form>
 </div>

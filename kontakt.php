@@ -55,7 +55,7 @@
     ]);
     ?>
 
-    <section class="py-16">
+    <section class="py-16 bg-verona/40">
         <div class="container mx-auto px-4 max-w-3xl">
             <form id="contact-form" class="bg-white p-8 rounded-lg shadow-lg">
                 <?php if (isset($_GET['menu'])): ?>

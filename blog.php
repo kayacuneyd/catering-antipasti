@@ -47,7 +47,7 @@ $posts = blog_posts();
     ]);
     ?>
 
-    <section class="py-16">
+    <section class="py-16 bg-verona/40">
         <div class="container mx-auto px-4 max-w-5xl">
             <div class="grid gap-8 md:grid-cols-2">
                 <?php foreach ($posts as $post): ?>

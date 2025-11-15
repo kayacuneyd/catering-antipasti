@@ -1,236 +1,240 @@
 {
-  "de": {
-    "preset": [
-      {
-        "name": "Business Lunch",
-        "description": "Ideal für Firmenfeiern, Konferenzen und Tagungen",
-        "items": [
-          "Mediterrane Fingerfood-Station mit Antipasti",
-          "Zwei warme Pasta-Variationen (vegetarisch & klassisch)",
-          "Saisonaler Blattsalat mit hausgemachtem Dressing",
-          "Dolci-Selection im Glas"
-        ]
-      },
-      {
-        "name": "Hochzeitsmenü Classico",
-        "description": "Vier Gänge mit italienischer Eleganz",
-        "items": [
-          "Antipasti della Casa an langen Tafeln",
-          "Risotto ai Funghi und hausgemachte Pasta",
-          "Kalbsrücken oder vegetarische Alternative",
-          "Signature Desserttisch"
-        ]
-      },
-      {
-        "name": "Aperitivo Experience",
-        "description": "Perfekt für Empfänge oder Networking-Events",
-        "items": [
-          "Bruschetta- und Crostini-Station",
-          "Auswahl an italienischen Käsen & Salumi",
-          "Focaccia, Grissini und Olivenvariationen",
-          "Prosecco- und Weinbegleitung"
-        ]
-      },
-      {
-        "name": "Regional Premium",
-        "description": "Italienische Klassiker trifft schwäbische Handwerkskunst",
-        "items": [
-          "Büffelmozzarella & gepickeltes Gemüse",
-          "Hausgemachte Ravioli mit saisonaler Füllung",
-          "Geschmorte Rinderbäckchen aus der Region",
-          "Dessertvariation mit Apfel, Honig und Rosmarin"
-        ]
-      }
-    ],
-    "categories": {
-      "antipasti": {
-        "label": "Antipasti (Vorspeisen)",
-        "items": [
-          {
-            "name": "Bruschetta al Pomodoro",
-            "description": "Knuspriges Ciabatta, sonnengereifte Tomaten, Basilikum"
-          },
-          {
-            "name": "Carpaccio di Manzo",
-            "description": "Rinderfilet, Rucola, Parmigiano Reggiano"
-          },
-          {
-            "name": "Caprese di Bufala",
-            "description": "Büffelmozzarella, Datterini-Tomaten, hausgemachtes Pesto"
-          },
-          {
-            "name": "Vitello Tonnato",
-            "description": "Kalbfleisch, cremige Thunfischsauce, Kapernäpfel"
-          },
-          {
-            "name": "Antipasti Misti",
-            "description": "Marinierte Gemüse, Oliven und italienische Salumi"
-          }
-        ]
-      },
-      "primi": {
-        "label": "Primi & Hauptgänge",
-        "items": [
-          {
-            "name": "Spaghetti alla Chitarra",
-            "description": "Tomatensugo aus San Marzano und Basilikumöl"
-          },
-          {
-            "name": "Risotto ai Funghi",
-            "description": "Carnaroli-Reis, Steinpilze, Grana Padano"
-          },
-          {
-            "name": "Lasagne Tradizionale",
-            "description": "Hausgemachte Béchamel, Ragù alla Bolognese"
-          },
-          {
-            "name": "Ossobuco alla Milanese",
-            "description": "Geschmorte Kalbshaxe, Safran-Risotto"
-          },
-          {
-            "name": "Auberginen-Involtini",
-            "description": "Ricotta, Spinat und geröstete Pinienkerne"
-          }
-        ]
-      },
-      "dolci": {
-        "label": "Dolci (Desserts)",
-        "items": [
-          {
-            "name": "Tiramisu della Casa",
-            "description": "Klassisch mit Espresso, Mascarpone und Kakao"
-          },
-          {
-            "name": "Panna Cotta",
-            "description": "Vanille, Waldbeeren und knuspriges Mandelcrumble"
-          },
-          {
-            "name": "Cannoli Siciliani",
-            "description": "Ricotta-Orangencreme, Pistazie"
-          },
-          {
-            "name": "Gelato Misto",
-            "description": "Hausgemachte Eisvariationen im Miniglas"
-          }
-        ]
-      }
+    "de": {
+        "preset": [
+            {
+                "name": "Business Lunch",
+                "description": "Ideal für Firmenfeiern, Konferenzen und Tagungen",
+                "items": [
+                    "Mediterrane Fingerfood-Station mit Antipasti",
+                    "Zwei warme Pasta-Variationen (vegetarisch & klassisch)",
+                    "Saisonaler Blattsalat mit hausgemachtem Dressing",
+                    "Dolci-Selection im Glas"
+                ]
+            },
+            {
+                "name": "Hochzeitsmenü Classico",
+                "description": "Vier Gänge mit italienischer Eleganz",
+                "items": [
+                    "Antipasti della Casa an langen Tafeln",
+                    "Risotto ai Funghi und hausgemachte Pasta",
+                    "Kalbsrücken oder vegetarische Alternative",
+                    "Signature Desserttisch"
+                ]
+            },
+            {
+                "name": "Aperitivo Experience",
+                "description": "Perfekt für Empfänge oder Networking-Events",
+                "items": [
+                    "Bruschetta- und Crostini-Station",
+                    "Auswahl an italienischen Käsen & Salumi",
+                    "Focaccia, Grissini und Olivenvariationen",
+                    "Prosecco- und Weinbegleitung"
+                ]
+            },
+            {
+                "name": "Regional Premium",
+                "description": "Italienische Klassiker trifft schwäbische Handwerkskunst",
+                "items": [
+                    "Büffelmozzarella & gepickeltes Gemüse",
+                    "Hausgemachte Ravioli mit saisonaler Füllung",
+                    "Geschmorte Rinderbäckchen aus der Region",
+                    "Dessertvariation mit Apfel, Honig und Rosmarin"
+                ]
+            }
+        ],
+        "categories": {
+            "antipasti": {
+                "label": "Antipasti (Vorspeisen)",
+                "items": [
+                    {
+                        "name": "Bruschetta al Pomodoro",
+                        "description": "Knuspriges Ciabatta, sonnengereifte Tomaten, Basilikum"
+                    },
+                    {
+                        "name": "Carpaccio di Manzo",
+                        "description": "Rinderfilet, Rucola, Parmigiano Reggiano"
+                    },
+                    {
+                        "name": "Caprese di Bufala",
+                        "description": "Büffelmozzarella, Datterini-Tomaten, hausgemachtes Pesto"
+                    },
+                    {
+                        "name": "Vitello Tonnato",
+                        "description": "Kalbfleisch, cremige Thunfischsauce, Kapernäpfel"
+                    },
+                    {
+                        "name": "Antipasti Misti",
+                        "description": "Marinierte Gemüse, Oliven und italienische Salumi"
+                    },
+                    {
+                        "name": "Pomodoro il doro",
+                        "description": "Ciabatta, sonnengereifte Tomaten"
+                    }
+                ]
+            },
+            "primi": {
+                "label": "Primi & Hauptgänge",
+                "items": [
+                    {
+                        "name": "Spaghetti alla Chitarra",
+                        "description": "Tomatensugo aus San Marzano und Basilikumöl"
+                    },
+                    {
+                        "name": "Risotto ai Funghi",
+                        "description": "Carnaroli-Reis, Steinpilze, Grana Padano"
+                    },
+                    {
+                        "name": "Lasagne Tradizionale",
+                        "description": "Hausgemachte Béchamel, Ragù alla Bolognese"
+                    },
+                    {
+                        "name": "Ossobuco alla Milanese",
+                        "description": "Geschmorte Kalbshaxe, Safran-Risotto"
+                    },
+                    {
+                        "name": "Auberginen-Involtini",
+                        "description": "Ricotta, Spinat und geröstete Pinienkerne"
+                    }
+                ]
+            },
+            "dolci": {
+                "label": "Dolci (Desserts)",
+                "items": [
+                    {
+                        "name": "Tiramisu della Casa",
+                        "description": "Klassisch mit Espresso, Mascarpone und Kakao"
+                    },
+                    {
+                        "name": "Panna Cotta",
+                        "description": "Vanille, Waldbeeren und knuspriges Mandelcrumble"
+                    },
+                    {
+                        "name": "Cannoli Siciliani",
+                        "description": "Ricotta-Orangencreme, Pistazie"
+                    },
+                    {
+                        "name": "Gelato Misto",
+                        "description": "Hausgemachte Eisvariationen im Miniglas"
+                    }
+                ]
+            }
+        }
+    },
+    "en": {
+        "preset": [
+            {
+                "name": "Business Lunch",
+                "description": "Perfect for corporate meetings and conferences",
+                "items": [
+                    "Mediterranean finger food & antipasti station",
+                    "Two warm pasta courses (vegetarian & classic)",
+                    "Seasonal salad with house vinaigrette",
+                    "Mini dessert selection"
+                ]
+            },
+            {
+                "name": "Wedding Menu Classico",
+                "description": "Four refined courses for timeless celebrations",
+                "items": [
+                    "Family style antipasti della casa",
+                    "Porcini risotto and handmade pasta",
+                    "Slow cooked veal or vegetarian signature dish",
+                    "Curated dessert table"
+                ]
+            },
+            {
+                "name": "Aperitivo Experience",
+                "description": "Ideal for receptions and networking mixers",
+                "items": [
+                    "Bruschetta & crostini display",
+                    "Italian cheese & charcuterie selection",
+                    "Focaccia, grissini, olives",
+                    "Prosecco and wine pairing"
+                ]
+            },
+            {
+                "name": "Regional Premium",
+                "description": "Italian classics with Swabian craftsmanship",
+                "items": [
+                    "Buffalo mozzarella & pickled vegetables",
+                    "House-made ravioli with seasonal filling",
+                    "Braised beef cheeks from regional farms",
+                    "Dessert trio with apple, honey, rosemary"
+                ]
+            }
+        ],
+        "categories": {
+            "antipasti": {
+                "label": "Antipasti (starters)",
+                "items": [
+                    {
+                        "name": "Bruschetta al Pomodoro",
+                        "description": "Toasted ciabatta, marinated tomatoes, basil"
+                    },
+                    {
+                        "name": "Beef Carpaccio",
+                        "description": "Tenderloin, rocket, Parmigiano Reggiano"
+                    },
+                    {
+                        "name": "Caprese di Bufala",
+                        "description": "Buffalo mozzarella, cherry tomatoes, pesto"
+                    },
+                    {
+                        "name": "Vitello Tonnato",
+                        "description": "Veal, creamy tuna sauce, capers"
+                    },
+                    {
+                        "name": "Antipasti Misti",
+                        "description": "Roasted vegetables, olives, Italian salumi"
+                    }
+                ]
+            },
+            "primi": {
+                "label": "Primi & mains",
+                "items": [
+                    {
+                        "name": "Spaghetti alla Chitarra",
+                        "description": "San Marzano tomato sugo, basil oil"
+                    },
+                    {
+                        "name": "Porcini Risotto",
+                        "description": "Carnaroli rice, porcini mushrooms, aged parmesan"
+                    },
+                    {
+                        "name": "Traditional Lasagne",
+                        "description": "Fresh pasta layers, ragù, béchamel"
+                    },
+                    {
+                        "name": "Ossobuco alla Milanese",
+                        "description": "Braised veal shank with saffron risotto"
+                    },
+                    {
+                        "name": "Eggplant Involtini",
+                        "description": "Ricotta, spinach, toasted pine nuts"
+                    }
+                ]
+            },
+            "dolci": {
+                "label": "Dolci (desserts)",
+                "items": [
+                    {
+                        "name": "House Tiramisu",
+                        "description": "Espresso, mascarpone, cocoa"
+                    },
+                    {
+                        "name": "Panna Cotta",
+                        "description": "Vanilla cream, forest berries, almond crunch"
+                    },
+                    {
+                        "name": "Cannoli Siciliani",
+                        "description": "Ricotta-orange filling, pistachio"
+                    },
+                    {
+                        "name": "Gelato Misto",
+                        "description": "Chef's gelato trio served mini style"
+                    }
+                ]
+            }
+        }
     }
-  },
-  "en": {
-    "preset": [
-      {
-        "name": "Business Lunch",
-        "description": "Perfect for corporate meetings and conferences",
-        "items": [
-          "Mediterranean finger food & antipasti station",
-          "Two warm pasta courses (vegetarian & classic)",
-          "Seasonal salad with house vinaigrette",
-          "Mini dessert selection"
-        ]
-      },
-      {
-        "name": "Wedding Menu Classico",
-        "description": "Four refined courses for timeless celebrations",
-        "items": [
-          "Family style antipasti della casa",
-          "Porcini risotto and handmade pasta",
-          "Slow cooked veal or vegetarian signature dish",
-          "Curated dessert table"
-        ]
-      },
-      {
-        "name": "Aperitivo Experience",
-        "description": "Ideal for receptions and networking mixers",
-        "items": [
-          "Bruschetta & crostini display",
-          "Italian cheese & charcuterie selection",
-          "Focaccia, grissini, olives",
-          "Prosecco and wine pairing"
-        ]
-      },
-      {
-        "name": "Regional Premium",
-        "description": "Italian classics with Swabian craftsmanship",
-        "items": [
-          "Buffalo mozzarella & pickled vegetables",
-          "House-made ravioli with seasonal filling",
-          "Braised beef cheeks from regional farms",
-          "Dessert trio with apple, honey, rosemary"
-        ]
-      }
-    ],
-    "categories": {
-      "antipasti": {
-        "label": "Antipasti (starters)",
-        "items": [
-          {
-            "name": "Bruschetta al Pomodoro",
-            "description": "Toasted ciabatta, marinated tomatoes, basil"
-          },
-          {
-            "name": "Beef Carpaccio",
-            "description": "Tenderloin, rocket, Parmigiano Reggiano"
-          },
-          {
-            "name": "Caprese di Bufala",
-            "description": "Buffalo mozzarella, cherry tomatoes, pesto"
-          },
-          {
-            "name": "Vitello Tonnato",
-            "description": "Veal, creamy tuna sauce, capers"
-          },
-          {
-            "name": "Antipasti Misti",
-            "description": "Roasted vegetables, olives, Italian salumi"
-          }
-        ]
-      },
-      "primi": {
-        "label": "Primi & mains",
-        "items": [
-          {
-            "name": "Spaghetti alla Chitarra",
-            "description": "San Marzano tomato sugo, basil oil"
-          },
-          {
-            "name": "Porcini Risotto",
-            "description": "Carnaroli rice, porcini mushrooms, aged parmesan"
-          },
-          {
-            "name": "Traditional Lasagne",
-            "description": "Fresh pasta layers, ragù, béchamel"
-          },
-          {
-            "name": "Ossobuco alla Milanese",
-            "description": "Braised veal shank with saffron risotto"
-          },
-          {
-            "name": "Eggplant Involtini",
-            "description": "Ricotta, spinach, toasted pine nuts"
-          }
-        ]
-      },
-      "dolci": {
-        "label": "Dolci (desserts)",
-        "items": [
-          {
-            "name": "House Tiramisu",
-            "description": "Espresso, mascarpone, cocoa"
-          },
-          {
-            "name": "Panna Cotta",
-            "description": "Vanilla cream, forest berries, almond crunch"
-          },
-          {
-            "name": "Cannoli Siciliani",
-            "description": "Ricotta-orange filling, pistachio"
-          },
-          {
-            "name": "Gelato Misto",
-            "description": "Chef's gelato trio served mini style"
-          }
-        ]
-      }
-    }
-  }
 }
