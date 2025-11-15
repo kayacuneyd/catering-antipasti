@@ -93,22 +93,22 @@
     <section class="py-16">
         <div class="container mx-auto px-4 max-w-6xl">
             <div class="text-center max-w-2xl mx-auto mb-12">
-                <p class="uppercase tracking-[0.4em] text-xs text-seagray">Timeline</p>
+                <p class="uppercase tracking-[0.4em] text-xs text-sangiovese">Timeline</p>
                 <h2 class="font-serif text-4xl text-olive mt-3 mb-4">Moments that shaped our kitchen</h2>
                 <p class="text-seagray">Every chapter added new recipes, suppliers and partner agencies – here are three highlights.</p>
             </div>
             <div class="grid gap-8 md:grid-cols-3">
-                <article class="rounded-3xl border border-verona/60 bg-verona/60 p-6 shadow-sm">
+                <article class="rounded-3xl border text-verona bg-sangiovese/30 p-6 shadow-sm">
                     <p class="text-sm text-seagray uppercase tracking-[0.4em]">1997</p>
                     <h3 class="font-serif text-2xl text-sangiovese mt-2 mb-3">Olio & Pane e Vino</h3>
                     <p class="text-seagray">First pop-up tastings, building a reliable sourcing network between Italy and Germany.</p>
                 </article>
-                <article class="rounded-3xl border border-verona/60 bg-verona/60 p-6 shadow-sm">
+                <article class="rounded-3xl border text-verona bg-sangiovese/30 p-6 shadow-sm">
                     <p class="text-sm text-seagray uppercase tracking-[0.4em]">2008</p>
                     <h3 class="font-serif text-2xl text-sangiovese mt-2 mb-3">Weinhalle 1896</h3>
                     <p class="text-seagray">Events for up to 600 guests with a focus on brand launches and curated private dining.</p>
                 </article>
-                <article class="rounded-3xl border border-verona/60 bg-verona/60 p-6 shadow-sm">
+                <article class="rounded-3xl border text-verona bg-sangiovese/30 p-6 shadow-sm">
                     <p class="text-sm text-seagray uppercase tracking-[0.4em]">Today</p>
                     <h3 class="font-serif text-2xl text-sangiovese mt-2 mb-3">Catering Antipasti</h3>
                     <p class="text-seagray">A mobile crew covering Stuttgart, Tübingen and the Black Forest – always with a personal host.</p>
