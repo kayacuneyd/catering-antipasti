@@ -1,6 +1,13 @@
 <?php
 require_once __DIR__ . '/config.php';
 
+$logo_url = SITE_LOGO;
+$logo_exists = false;
+if ($logo_url !== '') {
+    $logo_file = dirname(__DIR__) . $logo_url;
+    $logo_exists = is_file($logo_file);
+}
+
 if ($is_english) {
     $menu_links = [
         'home' => 'index.php',
@@ -53,8 +60,14 @@ if ($is_english) {
 <header class="bg-white shadow-md sticky top-0 z-50">
     <nav class="container mx-auto px-4 py-4 max-w-7xl">
         <div class="flex items-center justify-between">
-            <a href="<?php echo $menu_links['home']; ?>" class="font-serif text-2xl text-sangiovese">
-                <?php echo SITE_NAME; ?>
+            <a href="<?php echo $menu_links['home']; ?>" class="flex items-center font-serif text-2xl text-sangiovese">
+                <?php if ($logo_exists): ?>
+                    <img src="<?php echo htmlspecialchars($logo_url, ENT_QUOTES, 'UTF-8'); ?>"
+                         alt="<?php echo htmlspecialchars(SITE_NAME, ENT_QUOTES, 'UTF-8'); ?>"
+                         class="h-12 w-auto object-contain">
+                <?php else: ?>
+                    <?php echo SITE_NAME; ?>
+                <?php endif; ?>
             </a>
             <ul class="hidden lg:flex items-center gap-6 xl:gap-8">
                 <li>

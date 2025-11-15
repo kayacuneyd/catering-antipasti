@@ -22,6 +22,11 @@ define('ADMIN_EMAIL', $settings_data['contact_email'] ?? 'hasan@catering-antipas
 define('SITE_URL', 'https://catering-antipasti.de');
 define('WHATSAPP_NUMBER', $settings_data['whatsapp'] ?? '+4915123456789');
 define('MAINTENANCE_MODE', !empty($settings_data['maintenance_mode']));
+$logo_public_path = '';
+if (!empty($settings_data['logo_path'])) {
+    $logo_public_path = '/' . ltrim($settings_data['logo_path'], '/');
+}
+define('SITE_LOGO', $logo_public_path);
 
 $current_page = basename($_SERVER['PHP_SELF']);
 $is_english = strpos($_SERVER['REQUEST_URI'], '/en/') !== false;
