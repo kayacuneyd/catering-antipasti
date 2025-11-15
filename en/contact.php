@@ -61,7 +61,7 @@
                 <?php if (isset($_GET['menu'])): ?>
                     <div class="mb-6 p-4 bg-verona rounded-lg">
                         <p class="text-sm text-seagray mb-2">Selected menu:</p>
-                        <p class="font-semibold text-olive"><?php echo htmlspecialchars($_GET['menu'], ENT_QUOTES, 'UTF-8'); ?></p>
+                        <p class="text-xl font-semibold text-olive"><?php echo htmlspecialchars($_GET['menu'], ENT_QUOTES, 'UTF-8'); ?></p>
                         <input type="hidden" name="selected_menu" value="<?php echo htmlspecialchars($_GET['menu'], ENT_QUOTES, 'UTF-8'); ?>">
                     </div>
                 <?php endif; ?>

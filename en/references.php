@@ -95,7 +95,7 @@ $testimonials = $references['testimonials'] ?? [];
                             <h3 class="font-serif text-2xl">
                                 <?php echo htmlspecialchars($project['title'], ENT_QUOTES, 'UTF-8'); ?>
                             </h3>
-                            <p class="text-seagray">
+                            <p class="text-xl text-seagray">
                                 <?php echo htmlspecialchars($project['description'], ENT_QUOTES, 'UTF-8'); ?>
                             </p>
                             <?php if (!empty($project['tags'])): ?>
@@ -124,7 +124,7 @@ $testimonials = $references['testimonials'] ?? [];
                         <h2 class="font-serif text-3xl">
                             <?php echo htmlspecialchars($reference['title'], ENT_QUOTES, 'UTF-8'); ?>
                         </h2>
-                        <p class="text-seagray">with <?php echo htmlspecialchars($reference['client'], ENT_QUOTES, 'UTF-8'); ?></p>
+                        <p class="text-xl text-seagray">with <?php echo htmlspecialchars($reference['client'], ENT_QUOTES, 'UTF-8'); ?></p>
                     </div>
                     <p class="text-xl text-olive/90 italic mb-6">
                         “<?php echo htmlspecialchars($reference['quote'], ENT_QUOTES, 'UTF-8'); ?>”
@@ -161,7 +161,7 @@ $testimonials = $references['testimonials'] ?? [];
         <div class="container mx-auto px-4 max-w-4xl">
             <div class="rounded-3xl bg-white/10 p-10 text-center shadow-xl">
                 <h3 class="font-serif text-3xl mb-4">Ready for a similar result?</h3>
-                <p class="mb-8">We build brand-aligned catering concepts for corporate events, weddings and launches.</p>
+                <p class="text-xl mb-8">We build brand-aligned catering concepts for corporate events, weddings and launches.</p>
                 <div class="flex flex-col gap-3 sm:flex-row sm:justify-center">
                     <a href="contact.php" class="bg-white text-olive px-8 py-4 rounded-lg font-semibold">Contact us</a>
                     <button type="button" class="bg-transparent border border-white px-8 py-4 rounded-lg inline-flex items-center gap-2" onclick="whatsappInquiry({ subject: 'References', details: 'I would like to learn more about your case studies.' })">

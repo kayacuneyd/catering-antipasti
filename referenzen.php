@@ -95,7 +95,7 @@ $testimonials = $references['testimonials'] ?? [];
                             <h3 class="font-serif text-2xl">
                                 <?php echo htmlspecialchars($project['title'], ENT_QUOTES, 'UTF-8'); ?>
                             </h3>
-                            <p class="text-seagray">
+                            <p class="text-xl text-seagray">
                                 <?php echo htmlspecialchars($project['description'], ENT_QUOTES, 'UTF-8'); ?>
                             </p>
                             <?php if (!empty($project['tags'])): ?>
@@ -124,7 +124,7 @@ $testimonials = $references['testimonials'] ?? [];
                         <h2 class="font-serif text-3xl">
                             <?php echo htmlspecialchars($reference['title'], ENT_QUOTES, 'UTF-8'); ?>
                         </h2>
-                        <p class="text-seagray">mit <?php echo htmlspecialchars($reference['client'], ENT_QUOTES, 'UTF-8'); ?></p>
+                        <p class="text-xl text-seagray">mit <?php echo htmlspecialchars($reference['client'], ENT_QUOTES, 'UTF-8'); ?></p>
                     </div>
                     <p class="text-xl text-olive/90 italic mb-6">
                         „<?php echo htmlspecialchars($reference['quote'], ENT_QUOTES, 'UTF-8'); ?>“
@@ -161,7 +161,7 @@ $testimonials = $references['testimonials'] ?? [];
         <div class="container mx-auto px-4 max-w-4xl">
             <div class="rounded-3xl bg-white/10 p-10 text-center shadow-xl">
                 <h3 class="font-serif text-3xl mb-4">Interesse an einer ähnlichen Umsetzung?</h3>
-                <p class="mb-8">Wir entwickeln Konzepte für Business-Events, Hochzeiten und Launches – on-brand und skalierbar.</p>
+                <p class="text-xl mb-8">Wir entwickeln Konzepte für Business-Events, Hochzeiten und Launches – on-brand und skalierbar.</p>
                 <div class="flex flex-col gap-3 sm:flex-row sm:justify-center">
                     <a href="kontakt.php" class="bg-white text-olive px-8 py-4 rounded-lg font-semibold">Kontakt aufnehmen</a>
                     <button type="button" class="bg-transparent border border-white px-8 py-4 rounded-lg inline-flex items-center gap-2" onclick="whatsappInquiry({ subject: 'Referenzen', details: 'Ich interessiere mich für eine ähnliche Umsetzung.' })">

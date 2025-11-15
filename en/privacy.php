@@ -41,36 +41,36 @@
             </h1>
             <div class="prose prose-lg mx-auto text-seagray">
                 <h2>1. Overview</h2>
-                <p>
+                <p class="text-xl">
                     The following sections provide a simple overview of what happens to your personal data when you visit this website.
                 </p>
 
                 <h2>2. Data collection</h2>
-                <p>
+                <p class="text-xl">
                     Data processing on this website is carried out by the website operator.
                     Their contact details can be found in the imprint.
                 </p>
 
                 <h3>Contact form</h3>
-                <p>
+                <p class="text-xl">
                     When you submit our contact form, the details you provide including contact information are stored to process your request
                     and in case of follow-up questions. We do not share this data without your consent.
                 </p>
 
                 <h2>3. Hosting</h2>
-                <p>
+                <p class="text-xl">
                     This website is hosted by an external provider. Personal data collected on this site
                     is stored on the host's servers.
                 </p>
 
                 <h2>4. Your rights</h2>
-                <p>
+                <p class="text-xl">
                     You have the right to receive information about the origin, recipient and purpose of your stored personal data at any time free of charge.
                     You also have the right to request correction or deletion of this data.
                 </p>
 
                 <h2>5. WhatsApp</h2>
-                <p>
+                <p class="text-xl">
                     We offer WhatsApp for direct enquiries. Using WhatsApp is voluntary. Please avoid sending sensitive data via WhatsApp.
                     Find more on WhatsApp privacy at
                     <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener">https://www.whatsapp.com/legal/privacy-policy</a>.

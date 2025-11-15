@@ -81,11 +81,12 @@ require_once __DIR__ . '/../includes/menus.php';
                             </ul>
 
                             <div class="flex flex-col gap-3 border-t border-seagray/30 pt-4 text-sm text-seagray">
-                                <p>We define pricing together based on guest count and service scope.</p>
+                                <p class="text-xl">We define pricing together based on guest count and service scope.</p>
                                 <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                                     <a href="contact.php?menu=<?php echo urlencode($menu['name']); ?>"
-                                       class="inline-flex items-center justify-center gap-2 bg-sangiovese text-cream px-6 py-3 rounded-lg hover:bg-sangiovese/90 transition-all">
-                                        Request proposal
+                                       class="request-proposal-btn">
+                                        <span>Request</span>
+                                        <span class="request-proposal-btn__icon" aria-hidden="true">→</span>
                                     </a>
                                     <button type="button"
                                             class="menu-card-whatsapp text-sm text-sangiovese underline-offset-2 hover:underline"

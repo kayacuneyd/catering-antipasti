@@ -131,6 +131,38 @@
     gap: 0.5rem;
 }
 
+.request-proposal-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.9rem 1.8rem;
+    border-radius: 999px;
+    background: rgb(var(--color-sangiovese) / 1);
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: none;
+    box-shadow: 0 8px 18px rgb(var(--color-sangiovese) / 0.35);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.request-proposal-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px rgb(var(--color-sangiovese) / 0.5), 0 0 20px rgba(232, 185, 68, 0.45);
+}
+
+.request-proposal-btn__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.65rem;
+    height: 1.65rem;
+    border-radius: 999px;
+    background: rgb(255 255 255 / 0.2);
+    font-size: 0.95rem;
+}
+
 .service-card ul li {
     display: flex;
     gap: 0.5rem;

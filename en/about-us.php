@@ -46,19 +46,20 @@
         <div class="container mx-auto px-4 max-w-5xl">
             <div class="grid gap-12 lg:grid-cols-[1.4fr_1fr] items-center">
                 <div class="prose prose-lg text-seagray max-w-none">
-                    <p class="text-xl leading-relaxed">
+                    <p class="text-xl">
                         What started in 1997 as a tiny pop-up with olives, grilled vegetables and warm focaccia has grown
                         into a boutique catering studio. Stations such as Olio, Pane e Vino and later the Weinhalle 1896 in Stuttgart
                         shaped how we work today: craftsmanship first, reliable logistics and a team that understands brand experiences.
                     </p>
-                    <p>
+                    <br>
+                    <p class="text-xl">
                         We support product launches, vineyard weddings around Tübingen and private soirées in family homes.
                         The crew intentionally stays compact so that decisions remain quick, produce is bought fresh in the morning
                         and every table feels personally hosted.
                     </p>
 
                     <h2 class="font-serif text-3xl text-sangiovese mt-10 mb-4">Our philosophy</h2>
-                    <p>
+                    <p class="text-xl">
                         Antipasti signal the beginning of a convivial evening. Every composition is prepared in our kitchen with
                         slow techniques and a clear belief: fewer ingredients, better quality – from farmers in Baden-Württemberg
                         or directly imported from Apulia.
@@ -83,7 +84,7 @@
                     <div class="rounded-2xl bg-white/90 p-6 shadow-lg">
                         <p class="text-sm text-seagray uppercase tracking-[0.4em] mb-2">Milestones</p>
                         <p class="text-3xl font-serif text-sangiovese">1,200+</p>
-                        <p class="text-seagray">Events hosted since day one – boutique tastings to 1,000-guest productions.</p>
+                        <p class="text-xl text-seagray">Events hosted since day one – boutique tastings to 1,000-guest productions.</p>
                     </div>
                 </div>
             </div>
@@ -95,23 +96,23 @@
             <div class="text-center max-w-2xl mx-auto mb-12">
                 <p class="uppercase tracking-[0.4em] text-xs text-sangiovese">Timeline</p>
                 <h2 class="font-serif text-4xl text-olive mt-3 mb-4">Moments that shaped our kitchen</h2>
-                <p class="text-seagray">Every chapter added new recipes, suppliers and partner agencies – here are three highlights.</p>
+                <p class="text-xl text-seagray">Every chapter added new recipes, suppliers and partner agencies – here are three highlights.</p>
             </div>
             <div class="grid gap-8 md:grid-cols-3">
-                <article class="rounded-3xl border text-verona bg-sangiovese/30 p-6 shadow-sm">
+                <article class="rounded-3xl border text-verona bg-white p-6 shadow-sm">
                     <p class="text-sm text-seagray uppercase tracking-[0.4em]">1997</p>
                     <h3 class="font-serif text-2xl text-sangiovese mt-2 mb-3">Olio & Pane e Vino</h3>
-                    <p class="text-seagray">First pop-up tastings, building a reliable sourcing network between Italy and Germany.</p>
+                    <p class="text-xl text-seagray">First pop-up tastings, building a reliable sourcing network between Italy and Germany.</p>
                 </article>
-                <article class="rounded-3xl border text-verona bg-sangiovese/30 p-6 shadow-sm">
+                <article class="rounded-3xl border text-verona bg-white p-6 shadow-sm">
                     <p class="text-sm text-seagray uppercase tracking-[0.4em]">2008</p>
                     <h3 class="font-serif text-2xl text-sangiovese mt-2 mb-3">Weinhalle 1896</h3>
-                    <p class="text-seagray">Events for up to 600 guests with a focus on brand launches and curated private dining.</p>
+                    <p class="text-xl text-seagray">Events for up to 600 guests with a focus on brand launches and curated private dining.</p>
                 </article>
-                <article class="rounded-3xl border text-verona bg-sangiovese/30 p-6 shadow-sm">
+                <article class="rounded-3xl border text-verona bg-white p-6 shadow-sm">
                     <p class="text-sm text-seagray uppercase tracking-[0.4em]">Today</p>
                     <h3 class="font-serif text-2xl text-sangiovese mt-2 mb-3">Catering Antipasti</h3>
-                    <p class="text-seagray">A mobile crew covering Stuttgart, Tübingen and the Black Forest – always with a personal host.</p>
+                    <p class="text-xl text-seagray">A mobile crew covering Stuttgart, Tübingen and the Black Forest – always with a personal host.</p>
                 </article>
             </div>
         </div>
@@ -132,7 +133,7 @@
                 </div>
                 <div class="prose prose-lg text-seagray max-w-none">
                     <h2 class="font-serif text-3xl text-olive">People behind the buffet</h2>
-                    <p>
+                    <p class="text-xl">
                         Our crew combines chefs, event specialists and service staff that have worked together for years.
                         We speak German, English and Turkish – but most importantly, we understand what brands and private hosts expect.
                     </p>

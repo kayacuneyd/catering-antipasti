@@ -41,7 +41,7 @@
             </h1>
             <div class="prose prose-lg mx-auto text-seagray">
                 <h2>Service provider</h2>
-                <p>
+                <p class="text-xl">
                     Catering Antipasti<br>
                     Hasan Geray<br>
                     [Street & number]<br>
@@ -49,38 +49,38 @@
                 </p>
 
                 <h2>Contact</h2>
-                <p>
+                <p class="text-xl">
                     Phone: [Phone number]<br>
                     Email: <a href="mailto:<?php echo SITE_EMAIL; ?>"><?php echo SITE_EMAIL; ?></a>
                 </p>
 
                 <h2>VAT ID</h2>
-                <p>
+                <p class="text-xl">
                     VAT identification number according to §27 a Umsatzsteuergesetz:<br>
                     [VAT ID]
                 </p>
 
                 <h2>Supervisory authority</h2>
-                <p>
+                <p class="text-xl">
                     [Authority name]<br>
                     [Authority address]
                 </p>
 
                 <h2>Liability for content</h2>
-                <p>
+                <p class="text-xl">
                     As a service provider we are responsible for our own content on these pages according to § 7 Abs.1 TMG.
                     According to §§ 8 to 10 TMG we are not obliged to monitor transmitted or stored third-party information
                     or to investigate circumstances indicating illegal activity.
                 </p>
 
                 <h2>Liability for links</h2>
-                <p>
+                <p class="text-xl">
                     Our offer contains links to external websites of third parties on whose contents we have no influence.
                     We therefore cannot assume any liability for these external contents.
                 </p>
 
                 <h2>Copyright</h2>
-                <p>
+                <p class="text-xl">
                     The content and works created by the site operators on these pages are subject to German copyright law.
                     Contributions by third parties are marked as such.
                 </p>

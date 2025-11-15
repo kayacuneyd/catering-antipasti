@@ -4,7 +4,7 @@
         <div class="grid gap-8 md:grid-cols-3 mb-8">
             <div>
                 <h4 class="font-serif text-xl mb-4"><?php echo t('footer_contact'); ?></h4>
-                <p class="text-white/90 leading-relaxed">
+                <p class="text-xl text-white/90 leading-relaxed">
                     <?php echo t('footer_contact_info'); ?><br>
                     <a href="mailto:<?php echo SITE_EMAIL; ?>" class="hover:text-sangiovese">
                         <?php echo SITE_EMAIL; ?>
@@ -42,7 +42,7 @@
             </div>
         </div>
         <div class="border-t border-white/20 pt-6 text-center text-white/90 text-sm">
-            <p><?php echo t('footer_copyright'); ?></p>
+            <p class="text-xl"><?php echo t('footer_copyright'); ?></p>
             <p class="mt-2 text-xs text-white/80">
                 Built by <a href="https://kayacuneyt.com" target="_blank" rel="noopener" class="underline">Cüneyt Kaya</a> in Kornwestheim
             </p>
@@ -56,8 +56,8 @@
 
 <div id="cookie-banner" class="cookie-banner hidden" role="dialog" aria-live="polite">
     <div class="cookie-banner__body">
-        <p class="cookie-banner__title"><?php echo t('cookie_title'); ?></p>
-        <p class="cookie-banner__text"><?php echo t('cookie_text'); ?></p>
+        <p class="text-xl cookie-banner__title"><?php echo t('cookie_title'); ?></p>
+        <p class="text-xl cookie-banner__text"><?php echo t('cookie_text'); ?></p>
         <div class="cookie-banner__actions">
             <button type="button" id="cookie-accept-all" class="cookie-btn cookie-btn--primary">
                 <?php echo t('cookie_accept_all'); ?>

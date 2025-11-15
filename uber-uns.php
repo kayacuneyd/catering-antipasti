@@ -48,20 +48,21 @@
             <div class="container mx-auto px-4 max-w-5xl">
                 <div class="grid gap-12 lg:grid-cols-[1.4fr_1fr] items-center">
                     <div class="prose prose-lg text-seagray max-w-none">
-                        <p class="text-xl leading-relaxed">
+                        <p class="text-xl">
                             Was 1997 als kleines Pop-up mit Oliven, eingelegtem Gemüse und frischem Focaccia begann,
                             entwickelte sich Schritt für Schritt zu einer vollwertigen Catering-Manufaktur.
                             Stationen wie Olio, Pane e Vino oder die Weinhalle 1896 in Stuttgart haben nicht nur
                             unser Handwerk geformt, sondern auch unser Verständnis für Gastlichkeit, Markenauftritte und verlässliche Abläufe.
                         </p>
-                        <p>
+                        <br>
+                        <p class="text-xl">
                             Heute begleiten wir Unternehmen bei Produkteinführungen, Hochzeiten in den Weinbergen rund um Tübingen
                             oder private Geburtstage in der Scheune nebenan. Unser Team arbeitet bewusst klein – so bleiben Entscheidungen
                             schnell, Zutaten frisch eingekauft und jede Tafel persönlich betreut.
                         </p>
 
                         <h2 class="font-serif text-3xl text-sangiovese mt-10 mb-4">Unsere Philosophie</h2>
-                        <p>
+                        <p class="text-xl">
                             Antipasti sind für uns das Versprechen eines geselligen Abends. Deshalb entstehen alle Kompositionen in unserer
                             eigenen Cucina, mit viel Handarbeit und einer klaren Haltung: lieber weniger Zutaten, dafür beste Qualität vom Markt
                             in Reutlingen oder direkt aus Apulien.
@@ -86,7 +87,7 @@
                         <div class="rounded-2xl bg-white/90 p-6 shadow-lg">
                             <p class="text-sm text-seagray uppercase tracking-[0.4em] mb-2">Zahlen</p>
                             <p class="text-3xl font-serif text-sangiovese">1.200+</p>
-                            <p class="text-seagray">Events seit der Gründung – von Boutique-Events bis zu 1.000 Gästen.</p>
+                            <p class="text-xl text-seagray">Events seit der Gründung – von Boutique-Events bis zu 1.000 Gästen.</p>
                         </div>
                     </div>
                 </div>
@@ -98,23 +99,23 @@
                 <div class="text-center max-w-2xl mx-auto mb-12">
                     <p class="uppercase tracking-[0.4em] text-xs text-sangiovese">Timeline</p>
                     <h2 class="font-serif text-4xl text-olive mt-3 mb-4">Stationen, die uns geprägt haben</h2>
-                    <p class="text-seagray">Jedes Kapitel brachte neue Rezepte, Lieferanten und Lieblingskunden – hier ein kurzer Blick hinter die Kulissen.</p>
+                    <p class="text-xl text-seagray">Jedes Kapitel brachte neue Rezepte, Lieferanten und Lieblingskunden – hier ein kurzer Blick hinter die Kulissen.</p>
                 </div>
                 <div class="grid gap-8 md:grid-cols-3">
-                    <article class="rounded-3xl border text-verona bg-sangiovese/30 p-6 shadow-sm">
+                    <article class="rounded-3xl border text-verona bg-white p-6 shadow-sm">
                         <p class="text-sm text-seagray uppercase tracking-[0.4em]">1997</p>
                         <h3 class="font-serif text-2xl text-sangiovese mt-2 mb-3">Olio & Pane e Vino</h3>
-                        <p class="text-seagray">Erste Pop-up-Tastings, Aufbau eines Liefernetzwerks in Italien und Deutschland.</p>
+                        <p class="text-xl text-seagray">Erste Pop-up-Tastings, Aufbau eines Liefernetzwerks in Italien und Deutschland.</p>
                     </article>
-                    <article class="rounded-3xl border text-verona bg-sangiovese/30 p-6 shadow-sm">
+                    <article class="rounded-3xl border text-verona bg-white p-6 shadow-sm">
                         <p class="text-sm text-seagray uppercase tracking-[0.4em]">2008</p>
                         <h3 class="font-serif text-2xl text-sangiovese mt-2 mb-3">Weinhalle 1896</h3>
-                        <p class="text-seagray">Veranstaltungen mit bis zu 600 Gästen, Fokus auf Marken-Launches und Private Dining.</p>
+                        <p class="text-xl text-seagray">Veranstaltungen mit bis zu 600 Gästen, Fokus auf Marken-Launches und Private Dining.</p>
                     </article>
-                    <article class="rounded-3xl border text-verona bg-sangiovese/30 p-6 shadow-sm">
+                    <article class="rounded-3xl border text-verona bg-white p-6 shadow-sm">
                         <p class="text-sm text-seagray uppercase tracking-[0.4em]">Heute</p>
                         <h3 class="font-serif text-2xl text-sangiovese mt-2 mb-3">Catering Antipasti</h3>
-                        <p class="text-seagray">Mobiles Team zwischen Stuttgart, Tübingen und Schwarzwald – immer mit persönlichem Gastgeber.</p>
+                        <p class="text-xl text-seagray">Mobiles Team zwischen Stuttgart, Tübingen und Schwarzwald – immer mit persönlichem Gastgeber.</p>
                     </article>
                 </div>
             </div>
@@ -135,7 +136,7 @@
                     </div>
                     <div class="prose prose-lg text-seagray max-w-none">
                         <h2 class="font-serif text-3xl text-olive">Menschen hinter dem Buffet</h2>
-                        <p>
+                        <p class="text-xl">
                             Unsere Crew besteht aus Köch:innen, Event-Spezialist:innen und Servicepersonal, das seit Jahren eingespielt ist.
                             Wir sprechen Deutsch, Englisch und Türkisch – und verstehen vor allem die Sprache von Marken, die etwas Besonderes inszenieren möchten.
                         </p>

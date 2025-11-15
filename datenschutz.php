@@ -46,36 +46,36 @@
         <div class="container mx-auto px-4 max-w-4xl">
             <div class="prose prose-lg mx-auto text-seagray">
                 <h2>1. Datenschutz auf einen Blick</h2>
-                <p>
+                <p class="text-xl">
                     Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert,
                     wenn Sie unsere Website besuchen.
                 </p>
 
                 <h2>2. Datenerfassung auf unserer Website</h2>
-                <p>
+                <p class="text-xl">
                     Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Impressum entnehmen.
                 </p>
 
                 <h3>Kontaktformular</h3>
-                <p>
+                <p class="text-xl">
                     Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage
                     und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
                 </p>
 
                 <h2>3. Hosting</h2>
-                <p>
+                <p class="text-xl">
                     Unsere Website wird bei einem externen Dienstleister gehostet. Die personenbezogenen Daten, die auf unserer Website erfasst werden,
                     werden auf den Servern des Hosters gespeichert.
                 </p>
 
                 <h2>4. Ihre Rechte</h2>
-                <p>
+                <p class="text-xl">
                     Sie haben jederzeit das Recht unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten.
                     Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen.
                 </p>
 
                 <h2>5. WhatsApp</h2>
-                <p>
+                <p class="text-xl">
                     Für direkte Anfragen bieten wir einen WhatsApp-Kontakt an. Die Nutzung von WhatsApp erfolgt freiwillig.
                     Bitte übermitteln Sie darüber keine sensiblen Daten. Weitere Informationen zum Datenschutz von WhatsApp finden Sie unter
                     <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener">https://www.whatsapp.com/legal/privacy-policy</a>.

@@ -98,7 +98,7 @@
             <h2 class="font-serif text-4xl text-center text-olive mb-12">
                 Services
             </h2>
-            <p class="text-center text-seagray max-w-3xl mx-auto mb-12">
+            <p class="text-xl text-center text-seagray max-w-3xl mx-auto mb-12">
                 Modular service packages – from concept and logistics to on-site execution.
             </p>
             <?php
@@ -150,7 +150,7 @@
                             <h3 class="font-serif text-2xl text-white mb-1">
                                 <?php echo htmlspecialchars($service['title'], ENT_QUOTES, 'UTF-8'); ?>
                             </h3>
-                            <p class="text-white/80">
+                            <p class="text-xl text-white/80">
                                 <?php echo htmlspecialchars($service['text'], ENT_QUOTES, 'UTF-8'); ?>
                             </p>
                             <ul class="text-sm text-white/90 space-y-1">

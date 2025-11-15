@@ -72,7 +72,7 @@ $related = array_values(array_filter(blog_posts(), function ($item) use ($post) 
         ?>
     <?php else: ?>
         <?php ob_start(); ?>
-        <p class="text-cream/90">Dieser Beitrag existiert nicht mehr. Zurück zum <a class="text-cream underline" href="blog.php">Blog</a>.</p>
+        <p class="text-xl text-cream/90">Dieser Beitrag existiert nicht mehr. Zurück zum <a class="text-cream underline" href="blog.php">Blog</a>.</p>
         <?php $article_hero_body = ob_get_clean(); ?>
         <?php
         render_page_hero([
@@ -101,7 +101,7 @@ $related = array_values(array_filter(blog_posts(), function ($item) use ($post) 
             <div class="container mx-auto px-4 max-w-4xl">
                 <article class="prose max-w-none text-lg leading-relaxed">
                     <?php foreach ($post['content'] as $paragraph): ?>
-                        <p class="mb-6 text-olive/90">
+                        <p class="text-xl mb-6 text-olive/90">
                             <?php echo htmlspecialchars($paragraph, ENT_QUOTES, 'UTF-8'); ?>
                         </p>
                     <?php endforeach; ?>
@@ -146,7 +146,7 @@ $related = array_values(array_filter(blog_posts(), function ($item) use ($post) 
                                 <h3 class="font-serif text-2xl mb-3">
                                     <?php echo htmlspecialchars($item['title'], ENT_QUOTES, 'UTF-8'); ?>
                                 </h3>
-                                <p class="text-seagray mb-4">
+                                <p class="text-xl text-seagray mb-4">
                                     <?php echo htmlspecialchars($item['excerpt'], ENT_QUOTES, 'UTF-8'); ?>
                                 </p>
                                 <a href="blog-artikel.php?slug=<?php echo urlencode($item['slug']); ?>"

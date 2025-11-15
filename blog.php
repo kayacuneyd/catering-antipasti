@@ -70,7 +70,7 @@ $posts = blog_posts();
                         <h2 class="font-serif text-3xl mb-4">
                             <?php echo htmlspecialchars($post['title'], ENT_QUOTES, 'UTF-8'); ?>
                         </h2>
-                        <p class="text-seagray flex-1">
+                        <p class="text-xl text-seagray flex-1">
                             <?php echo htmlspecialchars($post['excerpt'], ENT_QUOTES, 'UTF-8'); ?>
                         </p>
                         <?php if (!empty($post['tags'])): ?>

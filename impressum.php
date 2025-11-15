@@ -46,7 +46,7 @@
         <div class="container mx-auto px-4 max-w-4xl">
             <div class="prose prose-lg mx-auto text-seagray">
                 <h2>Angaben gemäß § 5 TMG</h2>
-                <p>
+                <p class="text-xl">
                     Catering Antipasti<br>
                     Hasan Geray<br>
                     [Straße &amp; Hausnummer]<br>
@@ -54,38 +54,38 @@
                 </p>
 
                 <h2>Kontakt</h2>
-                <p>
+                <p class="text-xl">
                     Telefon: [Telefonnummer]<br>
                     E-Mail: <a href="mailto:<?php echo SITE_EMAIL; ?>"><?php echo SITE_EMAIL; ?></a>
                 </p>
 
                 <h2>Umsatzsteuer-ID</h2>
-                <p>
+                <p class="text-xl">
                     Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz:<br>
                     [USt-IdNr.]
                 </p>
 
                 <h2>Aufsichtsbehörde</h2>
-                <p>
+                <p class="text-xl">
                     [Zuständige Behörde]<br>
                     [Adresse der Behörde]
                 </p>
 
                <h2>Haftung für Inhalte</h2>
-                <p>
+                <p class="text-xl">
                     Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
                     Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen
                     zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
                 </p>
 
                 <h2>Haftung für Links</h2>
-                <p>
+                <p class="text-xl">
                     Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben.
                     Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.
                 </p>
 
                 <h2>Urheberrecht</h2>
-                <p>
+                <p class="text-xl">
                     Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht.
                     Beiträge Dritter sind als solche gekennzeichnet.
                 </p>
