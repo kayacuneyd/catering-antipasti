@@ -10,6 +10,13 @@
     --color-cream: 245 230 211;
 }
 
+.nav-logo__img {
+    height: 72px;
+    max-height: 72px;
+    width: auto;
+    object-fit: contain;
+}
+
 /* Palette driven overrides so Tailwind utility classes stay in sync */
 .text-olive {
     color: rgb(var(--color-olive) / 1) !important;
