@@ -34,8 +34,8 @@
 <?php include __DIR__ . '/../includes/header.php'; ?>
 
 <main>
-    <section class="relative flex h-screen items-center justify-center bg-cover bg-center"
-             style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../assets/images/hero-bg.jpg');">
+    <section class="relative flex h-screen items-center justify-center bg-cover bg-center backdrop-blur-sm"
+             style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../assets/images/hero-bg.jpg');">
         <div class="max-w-4xl px-4 text-center text-white">
             <h1 class="font-serif text-5xl md:text-7xl mb-6 leading-tight">
                 Italian Elegance,<br>Swabian Warmth
@@ -44,13 +44,9 @@
                 25+ years of catering in the Tübingen & Stuttgart region
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="menu.php"
-                   class="bg-sangiovese hover:bg-sangiovese/90 text-cream px-8 py-4 rounded-lg text-lg transition-all">
-                    View menus
-                </a>
                 <a href="contact.php"
                    class="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white border-2 border-white px-8 py-4 rounded-lg text-lg transition-all">
-                    Request a quote
+                    Contact us
                 </a>
                 <button type="button"
                         class="bg-white text-olive px-8 py-4 rounded-lg text-lg transition-all hover:bg-verona inline-flex items-center justify-center gap-2"
@@ -62,16 +58,38 @@
         </div>
     </section>
 
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4 max-w-3xl text-center text-olive space-y-6">
-            <p class="text-lg">
-                Whether you host a leadership offsite, wedding or branded launch, we choreograph culinary flow,
-                service moments and logistics so every touchpoint reinforces your story.
+    <section class="py-20 bg-verona text-center">
+        <div class="container mx-auto px-4 max-w-5xl ready-highlight__content">
+            <div class="mb-10 inline-flex items-center gap-3 bg-white/10 px-6 py-2 rounded-full text-sm ready-badge">
+                <span class="w-2 h-2 rounded-full bg-terracotta animate-ping"></span>
+                <span>48-hour proposals & founder-led guidance</span>
+            </div>
+            <h2 class="font-serif text-4xl mb-6">
+                Ready for your next event?
+            </h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Whether you plan a leadership offsite, a wedding or a launch event: we orchestrate culinary flow,
+                service and logistics so every touchpoint reinforces your story. Tell us about your guests and goals –
+                we deliver ideas, timelines and budget in one concise deck.
             </p>
-            <p class="text-lg text-seagray">
-                From the first briefing through mood boards, tasting sessions and on-site direction, Hasan Geray guides
-                you personally with clear timelines and a hands-on team.
-            </p>
+            <div class="text-xl mb-8 max-w-2xl mx-auto">
+                From the first briefing through mood boards, tasting sessions and on-site direction, Hasan Geray works
+                alongside you with clear timelines and a hands-on team.
+            </div>
+            <div class="flex flex-wrap gap-6 justify-center mb-10">
+                <div class="ready-stat">
+                    <span class="text-4xl font-serif">25+</span>
+                    <span>years of expertise</span>
+                </div>
+                <div class="ready-stat">
+                    <span class="text-4xl font-serif">120</span>
+                    <span>events per year</span>
+                </div>
+                <div class="ready-stat">
+                    <span class="text-4xl font-serif">98%</span>
+                    <span>referral rate</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -147,46 +165,6 @@
         </div>
     </section>
 
-    <section class="py-20 bg-verona text-white text-center ready-highlight">
-        <div class="container mx-auto px-4 max-w-5xl ready-highlight__content">
-            <div class="mb-10 inline-flex items-center gap-3 bg-white/10 px-6 py-2 rounded-full text-sm ready-badge">
-                <span class="w-2 h-2 rounded-full bg-terracotta animate-ping"></span>
-                <span>48-hour proposals & founder-led guidance</span>
-            </div>
-            <h2 class="font-serif text-4xl mb-6 text-white">
-                Ready for your next event?
-            </h2>
-            <p class="text-xl mb-8 text-white max-w-2xl mx-auto">
-                Tell us about your guests and objectives – we share menu ideas, flow and budget in one concise deck.
-            </p>
-            <div class="flex flex-wrap gap-6 justify-center mb-10">
-                <div class="ready-stat">
-                    <span class="text-4xl font-serif">25+</span>
-                    <span>years of expertise</span>
-                </div>
-                <div class="ready-stat">
-                    <span class="text-4xl font-serif">120</span>
-                    <span>events per year</span>
-                </div>
-                <div class="ready-stat">
-                    <span class="text-4xl font-serif">98%</span>
-                    <span>referral rate</span>
-                </div>
-            </div>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="contact.php"
-                   class="inline-block bg-sangiovese hover:bg-sangiovese/90 px-10 py-4 rounded-lg text-lg transition-all text-cream">
-                    Contact us
-                </a>
-                <button type="button"
-                        class="inline-flex items-center justify-center gap-2 border-terracotta border-2 bg-white/20 hover:bg-white/30 px-10 py-4 rounded-lg text-lg text-olive transition-all"
-                        onclick="whatsappInquiry({ subject: 'Event enquiry', details: 'I would like to receive a quote.' })">
-                    <?php echo whatsapp_icon('h-5 w-5'); ?>
-                    <span>WhatsApp</span>
-                </button>
-            </div>
-        </div>
-    </section>
 </main>
 
 <?php include __DIR__ . '/../includes/footer.php'; ?>

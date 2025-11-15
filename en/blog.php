@@ -39,16 +39,16 @@ $posts = blog_posts('en');
 <?php include __DIR__ . '/../includes/header.php'; ?>
 
 <main>
-    <section class="py-20">
-        <div class="container mx-auto px-4 max-w-5xl">
-            <div class="max-w-3xl mb-12">
-                <p class="uppercase tracking-[0.3em] text-xs text-sangiovese mb-4">Insights</p>
-                <h1 class="font-serif text-5xl mb-6">Catering stories & strategy</h1>
-                <p class="text-lg text-seagray">
-                    Project recaps, playbooks from 25+ years in catering and inspiration for your next event.
-                </p>
-            </div>
+    <?php
+    render_page_hero([
+        'eyebrow' => 'Insights',
+        'title' => 'Catering stories & strategy',
+        'description' => 'Project recaps, playbooks from 25+ years in catering and inspiration for your next event.',
+    ]);
+    ?>
 
+    <section class="py-16 bg-verona/40">
+        <div class="container mx-auto px-4 max-w-5xl">
             <div class="grid gap-8 md:grid-cols-2">
                 <?php foreach ($posts as $post): ?>
                     <article class="bg-white rounded-2xl shadow-lg p-0 flex flex-col overflow-hidden">

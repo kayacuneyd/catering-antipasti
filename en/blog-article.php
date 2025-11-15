@@ -51,29 +51,43 @@ $related = array_values(array_filter(blog_posts('en'), function ($item) use ($po
 <?php include __DIR__ . '/../includes/header.php'; ?>
 
 <main>
-    <section class="py-20 bg-verona/60 text-white">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <?php if ($post): ?>
-                <p class="uppercase tracking-[0.4em] text-xs text-white/70 mb-4">Insights</p>
-                <h1 class="font-serif text-5xl mb-4 text-white">
-                    <?php echo htmlspecialchars($post['title'], ENT_QUOTES, 'UTF-8'); ?>
-                </h1>
-                <div class="text-white/80 text-sm flex flex-wrap gap-4">
-                    <span><?php echo htmlspecialchars(blog_date($post['date'], 'en'), ENT_QUOTES, 'UTF-8'); ?></span>
-                    <span>·</span>
-                    <span><?php echo htmlspecialchars($post['category'], ENT_QUOTES, 'UTF-8'); ?></span>
-                </div>
-            <?php else: ?>
-                <h1 class="font-serif text-4xl mb-4 text-white">Article not found</h1>
-                <p class="text-white/80">This post no longer exists. Return to the <a class="text-white underline" href="blog.php">blog overview</a>.</p>
-            <?php endif; ?>
+    <?php if ($post): ?>
+        <?php ob_start(); ?>
+        <div class="text-cream/80 text-sm flex flex-wrap gap-4">
+            <span><?php echo htmlspecialchars(blog_date($post['date'], 'en'), ENT_QUOTES, 'UTF-8'); ?></span>
+            <span>·</span>
+            <span><?php echo htmlspecialchars($post['category'], ENT_QUOTES, 'UTF-8'); ?></span>
         </div>
-    </section>
+        <?php $article_hero_body = ob_get_clean(); ?>
+        <?php
+        render_page_hero([
+            'eyebrow' => 'Insights',
+            'title' => $post ? $post['title'] : '',
+            'description' => '',
+            'body' => $article_hero_body,
+            'container_classes' => 'container mx-auto px-4 max-w-4xl',
+            'eyebrow_classes' => 'uppercase tracking-[0.4em] text-xs text-cream/80 mb-4',
+            'title_classes' => 'font-serif text-5xl mb-4',
+        ]);
+        ?>
+    <?php else: ?>
+        <?php ob_start(); ?>
+        <p class="text-cream/90">This post is no longer available. Return to the <a class="text-cream underline" href="blog.php">blog</a>.</p>
+        <?php $article_hero_body = ob_get_clean(); ?>
+        <?php
+        render_page_hero([
+            'title' => 'Article not found',
+            'description' => '',
+            'body' => $article_hero_body,
+            'container_classes' => 'container mx-auto px-4 max-w-4xl',
+        ]);
+        ?>
+    <?php endif; ?>
 
     <?php if ($post): ?>
         <?php if (!empty($post['image'])): ?>
-            <section class="bg-white">
-                <div class="container mx-auto px-4 max-w-4xl">
+            <section class="bg-verona">
+                <div class="container mx-auto px-4 max-w-4xl my-10">
                     <div class="overflow-hidden rounded-3xl shadow-lg">
                         <img src="<?php echo htmlspecialchars($post['image'], ENT_QUOTES, 'UTF-8'); ?>"
                              alt="<?php echo htmlspecialchars($post['image_alt'] ?? $post['title'], ENT_QUOTES, 'UTF-8'); ?>"

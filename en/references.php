@@ -42,15 +42,13 @@ $testimonials = $references['testimonials'] ?? [];
 <?php include __DIR__ . '/../includes/header.php'; ?>
 
 <main>
-    <section class="bg-vineyard text-cream py-20">
-        <div class="container mx-auto px-4 max-w-5xl">
-            <p class="uppercase tracking-[0.4em] text-xs text-verona mb-3">References</p>
-            <h1 class="font-serif text-5xl mb-6">Selected case studies & feedback</h1>
-            <p class="text-cream/90 text-lg max-w-3xl">
-                From intimate aperitivo gatherings to flagship launches – we design catering experiences that mirror your brand.
-            </p>
-        </div>
-    </section>
+    <?php
+    render_page_hero([
+        'eyebrow' => 'References',
+        'title' => 'Selected case studies & feedback',
+        'description' => 'From curated aperitivo bars to flagship launches – we design experiences that mirror your brand and objectives.',
+    ]);
+    ?>
 
     <section class="py-16 bg-verona/40">
         <div class="container mx-auto px-4 max-w-5xl">

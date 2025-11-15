@@ -86,8 +86,8 @@ $related = array_values(array_filter(blog_posts(), function ($item) use ($post) 
 
     <?php if ($post): ?>
         <?php if (!empty($post['image'])): ?>
-            <section class="bg-white">
-                <div class="container mx-auto px-4 max-w-4xl">
+            <section class="bg-verona">
+                <div class="container mx-auto px-4 max-w-4xl my-10">
                     <div class="overflow-hidden rounded-3xl shadow-lg">
                         <img src="<?php echo htmlspecialchars($post['image'], ENT_QUOTES, 'UTF-8'); ?>"
                              alt="<?php echo htmlspecialchars($post['image_alt'] ?? $post['title'], ENT_QUOTES, 'UTF-8'); ?>"

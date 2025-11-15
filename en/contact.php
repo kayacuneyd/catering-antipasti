@@ -34,23 +34,29 @@
 <?php include __DIR__ . '/../includes/header.php'; ?>
 
 <main>
-    <section class="py-20">
-        <div class="container mx-auto px-4 max-w-3xl">
-            <h1 class="font-serif text-5xl text-center text-olive mb-4">
-                Contact
-            </h1>
-            <p class="text-center text-seagray mb-8 text-lg">
-                We respond within 48 hours — every enquiry is welcome.
-            </p>
-            <div class="flex justify-center mb-10">
-                <button type="button"
-                        class="inline-flex items-center gap-2 rounded-lg bg-sangiovese px-5 py-3 text-cream hover:bg-sangiovese/90 transition-all"
-                        onclick="whatsappInquiry({ subject: 'Contact request', details: 'Please get back to me.' })">
-                    <?php echo whatsapp_icon('h-5 w-5'); ?>
-                    <span>Chat on WhatsApp</span>
-                </button>
-            </div>
+    <?php ob_start(); ?>
+    <div class="flex flex-col sm:flex-row sm:items-center gap-4 mt-8">
+        <button type="button"
+                class="inline-flex items-center justify-center gap-2 rounded-lg bg-white/10 px-5 py-3 text-white font-semibold hover:bg-white/20 transition-all"
+                onclick="whatsappInquiry({ subject: 'Contact request', details: 'Please get back to me.' })">
+            <?php echo whatsapp_icon('h-5 w-5'); ?>
+            <span>Chat on WhatsApp</span>
+        </button>
+    </div>
+    <?php $contact_hero_body = ob_get_clean(); ?>
+    <?php
+    render_page_hero([
+        'eyebrow' => 'Contact',
+        'title' => 'Speak directly with Hasan Geray',
+        'description' => 'We reply within 48 hours with a personalised recommendation.',
+        'body' => $contact_hero_body,
+        'container_classes' => 'container mx-auto px-4 max-w-5xl',
+        'description_classes' => 'text-cream/90 text-lg',
+    ]);
+    ?>
 
+    <section class="py-16 bg-verona/40">
+        <div class="container mx-auto px-4 max-w-3xl">
             <form id="contact-form" class="bg-white p-8 rounded-lg shadow-lg">
                 <?php if (isset($_GET['menu'])): ?>
                     <div class="mb-6 p-4 bg-verona rounded-lg">
