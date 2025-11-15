@@ -3,13 +3,31 @@ DirectoryIndex index.php
 
 <IfModule mod_rewrite.c>
 RewriteEngine On
+
 # Redirect /en to /en/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^en$ en/ [R=301,L]
+
+# Redirect direct PHP requests (outside admin/api/assets/logs) to clean URLs
+RewriteCond %{REQUEST_URI} !^/admin
+RewriteCond %{REQUEST_URI} !^/api
+RewriteCond %{REQUEST_URI} !^/assets
+RewriteCond %{REQUEST_URI} !^/logs
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^(.+)\.php$ /$1 [R=301,L]
+
+# Map clean URLs back to their PHP files
+RewriteCond %{REQUEST_URI} !^/admin
+RewriteCond %{REQUEST_URI} !^/api
+RewriteCond %{REQUEST_URI} !^/assets
+RewriteCond %{REQUEST_URI} !^/logs
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.+)$ $1.php [QSA,L]
 </IfModule>
 
 <IfModule mod_php7.c>
 php_flag display_errors Off
 </IfModule>
-
