@@ -63,11 +63,12 @@
         <div class="container mx-auto px-4 max-w-5xl ready-highlight__content">
             <div class="mb-10 inline-flex items-center gap-3 bg-white/10 px-6 py-2 rounded-full text-sm ready-badge">
                 <span class="w-2 h-2 rounded-full bg-terracotta animate-ping"></span>
-                <span>48-Stunden-Angebot & persönliche Betreuung</span>
+                <span class="border border-solid border-vineyard px-4 py-2 rounded-lg">48-Stunden-Angebot & persönliche Betreuung</span>
             </div>
-            <h2 class="font-serif text-4xl mb-6">
+            <h2 class="font-serif text-4xl mb-4">
                 Bereit für Ihr nächstes Event?
             </h2>
+            <div class="mx-auto mb-8 h-1 w-24 rounded-full bg-terracotta/80"></div>
             <p class="text-xl mb-8 max-w-2xl mx-auto">
                 Ob Sie ein C-Level-Offsite, eine Hochzeit oder einen Markenlaunch planen: Wir orchestrieren Küche,
                 Service und Ablauf dramaturgisch durchdacht und verankern Ihre Botschaften im gesamten Erlebnis.
