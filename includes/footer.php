@@ -1,9 +1,23 @@
-<?php require_once __DIR__ . '/config.php'; ?>
+<?php
+require_once __DIR__ . '/config.php';
+$footer_logo = SITE_FOOTER_LOGO;
+$footer_logo_exists = false;
+if ($footer_logo !== '') {
+    $footer_logo_path = dirname(__DIR__) . $footer_logo;
+    $footer_logo_exists = is_file($footer_logo_path);
+}
+?>
 <footer class="bg-vineyard text-white py-12">
     <div class="container mx-auto px-4 max-w-7xl">
         <div class="grid gap-8 md:grid-cols-3 mb-8">
             <div>
-                <h4 class="font-serif text-xl mb-4"><?php echo t('footer_contact'); ?></h4>
+                <?php if ($footer_logo_exists): ?>
+                    <a href="<?php echo $is_english ? 'index.php' : 'index.php'; ?>" class="inline-flex mb-6">
+                        <img src="<?php echo htmlspecialchars($footer_logo, ENT_QUOTES, 'UTF-8'); ?>"
+                             alt="<?php echo htmlspecialchars(SITE_NAME, ENT_QUOTES, 'UTF-8'); ?>"
+                             class="h-32 w-auto object-contain">
+                    </a>
+                <?php endif; ?>
                 <p class="text-xl text-white/90 leading-relaxed">
                     <?php echo t('footer_contact_info'); ?><br>
                     <a href="mailto:<?php echo SITE_EMAIL; ?>" class="hover:text-sangiovese">

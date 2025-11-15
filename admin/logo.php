@@ -22,28 +22,56 @@ $page_title = 'Logo Yönetimi';
     </div>
 <?php endif; ?>
 
-<div class="rounded-2xl bg-white p-6 shadow space-y-6">
-    <div>
-        <h3 class="text-xl font-semibold text-gray-900">Mevcut Logo</h3>
-        <p class="text-sm text-gray-500">SVG, PNG veya WebP önerilir.</p>
-    </div>
-    <?php if ($logoPath && file_exists(admin_path($logoPath))): ?>
-        <div class="flex flex-col gap-3 rounded-xl border border-gray-100 p-6">
-            <img src="../<?= htmlspecialchars($logoPath) ?>" alt="Mevcut Logo" class="h-24 object-contain">
-            <p class="text-xs text-gray-400">Dosya: <?= htmlspecialchars($logoPath) ?></p>
+<div class="grid gap-6 lg:grid-cols-2">
+    <div class="rounded-2xl bg-white p-6 shadow space-y-6">
+        <div>
+            <h3 class="text-xl font-semibold text-gray-900">Genel Logo</h3>
+            <p class="text-sm text-gray-500">Header ve açık zeminli alanlarda kullanılır.</p>
         </div>
-    <?php else: ?>
-        <div class="rounded-xl border border-dashed border-gray-300 p-10 text-center text-gray-500">Henüz logo yüklenmedi.</div>
-    <?php endif; ?>
+        <?php if ($logoPath && file_exists(admin_path($logoPath))): ?>
+            <div class="flex flex-col gap-3 rounded-xl border border-gray-100 p-6">
+                <img src="../<?= htmlspecialchars($logoPath) ?>" alt="Mevcut Logo" class="h-24 object-contain">
+                <p class="text-xs text-gray-400">Dosya: <?= htmlspecialchars($logoPath) ?></p>
+            </div>
+        <?php else: ?>
+            <div class="rounded-xl border border-dashed border-gray-300 p-10 text-center text-gray-500">Henüz logo yüklenmedi.</div>
+        <?php endif; ?>
 
-    <form method="POST" action="logo-upload.php" enctype="multipart/form-data" class="space-y-4">
-        <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
-        <label class="block">
-            <span class="text-sm font-semibold text-gray-600">Yeni Logo Dosyası</span>
-            <input type="file" name="logo" accept=".png,.jpg,.jpeg,.svg,.webp" required class="mt-2 w-full rounded-lg border border-gray-200 px-4 py-3">
-        </label>
-        <button class="w-full rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 py-3 text-lg font-semibold text-white">Yükle</button>
-    </form>
+        <form method="POST" action="logo-upload.php" enctype="multipart/form-data" class="space-y-4">
+            <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
+            <input type="hidden" name="logo_type" value="primary">
+            <label class="block">
+                <span class="text-sm font-semibold text-gray-600">Yeni Logo Dosyası</span>
+                <input type="file" name="logo" accept=".png,.jpg,.jpeg,.svg,.webp" required class="mt-2 w-full rounded-lg border border-gray-200 px-4 py-3">
+            </label>
+            <button class="w-full rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 py-3 text-lg font-semibold text-white">Yükle</button>
+        </form>
+    </div>
+
+    <div class="rounded-2xl bg-white p-6 shadow space-y-6">
+        <div>
+            <h3 class="text-xl font-semibold text-gray-900">Footer Logosu</h3>
+            <p class="text-sm text-gray-500">Koyu arka planlı alanlarda kullanılan alternatif logo.</p>
+        </div>
+        <?php if ($footerLogoPath && file_exists(admin_path($footerLogoPath))): ?>
+            <div class="flex flex-col gap-3 rounded-xl border border-gray-100 p-6">
+                <img src="../<?= htmlspecialchars($footerLogoPath) ?>" alt="Footer Logo" class="h-24 object-contain">
+                <p class="text-xs text-gray-400">Dosya: <?= htmlspecialchars($footerLogoPath) ?></p>
+            </div>
+        <?php else: ?>
+            <div class="rounded-xl border border-dashed border-gray-300 p-10 text-center text-gray-500">Henüz footer logosu bulunmuyor.</div>
+        <?php endif; ?>
+
+        <form method="POST" action="logo-upload.php" enctype="multipart/form-data" class="space-y-4">
+            <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
+            <input type="hidden" name="logo_type" value="footer">
+            <label class="block">
+                <span class="text-sm font-semibold text-gray-600">Footer Logo Dosyası</span>
+                <input type="file" name="logo" accept=".png,.jpg,.jpeg,.svg,.webp" required class="mt-2 w-full rounded-lg border border-gray-200 px-4 py-3">
+            </label>
+            <button class="w-full rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 py-3 text-lg font-semibold text-white">Yükle</button>
+        </form>
+    </div>
 </div>
 
 <?php include __DIR__ . '/includes/footer.php'; ?>

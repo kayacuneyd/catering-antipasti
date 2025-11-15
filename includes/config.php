@@ -27,6 +27,12 @@ if (!empty($settings_data['logo_path'])) {
     $logo_public_path = '/' . ltrim($settings_data['logo_path'], '/');
 }
 define('SITE_LOGO', $logo_public_path);
+
+$footer_logo_public_path = $logo_public_path;
+if (!empty($settings_data['footer_logo_path'])) {
+    $footer_logo_public_path = '/' . ltrim($settings_data['footer_logo_path'], '/');
+}
+define('SITE_FOOTER_LOGO', $footer_logo_public_path);
 require_once __DIR__ . '/palette-defaults.php';
 
 $current_page = basename($_SERVER['PHP_SELF']);
