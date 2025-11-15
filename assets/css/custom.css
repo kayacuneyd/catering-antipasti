@@ -1,13 +1,13 @@
 /* Custom overrides for Catering Antipasti */
 
 :root {
-    --color-olive: 92 74 60;
+    --color-olive: 108 31 43;
     --color-sangiovese: 108 31 43;
     --color-verona: 245 230 211;
     --color-terracotta: 232 185 68;
     --color-seagray: 122 140 142;
     --color-vineyard: 108 31 43;
-    --color-cream: 245 230 211;
+    --color-cream: 255 255 255;
 }
 
 .nav-logo__img {

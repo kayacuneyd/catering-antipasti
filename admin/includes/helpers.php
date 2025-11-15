@@ -22,6 +22,8 @@ if (!defined('ADMIN_UPLOAD_DIR')) {
     define('ADMIN_UPLOAD_DIR', ADMIN_PROJECT_ROOT . 'assets/uploads');
 }
 
+require_once ADMIN_PROJECT_ROOT . 'includes/palette-defaults.php';
+
 /**
  * Resolve a path relative to the project root when a non-absolute path
  * is provided.
@@ -209,39 +211,20 @@ function save_settings(array $settings): bool
 
 function get_palettes(): array
 {
-    $defaults = [
-        'active' => 'classic',
-        'classic' => [
-            'olive' => '#5C4A3C',
-            'sangiovese' => '#D4704A',
-            'verona' => '#F5E6D3',
-            'terracotta' => '#E8B944',
-            'seagray' => '#7A8C8E',
-            'vineyard' => '#3A5A40',
-            'cream' => '#F5E6D3'
-        ],
-        'tuscan' => [
-            'olive' => '#4A3B2B',
-            'sangiovese' => '#B8402A',
-            'verona' => '#F7E3C8',
-            'terracotta' => '#D79B49',
-            'seagray' => '#8A9A9C',
-            'vineyard' => '#2F5233',
-            'cream' => '#FCF1E1'
-        ],
-        'coastal' => [
-            'olive' => '#2E4A62',
-            'sangiovese' => '#D94F70',
-            'verona' => '#EFF6F9',
-            'terracotta' => '#F2AF29',
-            'seagray' => '#4D7D8C',
-            'vineyard' => '#1E3F2F',
-            'cream' => '#F9FBF2'
-        ]
-    ];
+    $defaults = palette_default_presets();
+    $baseState = array_merge(['active' => 'classic'], $defaults);
+    $stored = read_json_file('data/palettes.json', $baseState);
+    $palettes = array_merge($baseState, $stored);
 
-    $palettes = read_json_file('data/palettes.json', $defaults);
-    return array_merge($defaults, $palettes);
+    foreach ($defaults as $name => $colors) {
+        if (isset($palettes[$name]) && is_array($palettes[$name])) {
+            $palettes[$name] = array_merge($colors, $palettes[$name]);
+        } else {
+            $palettes[$name] = $colors;
+        }
+    }
+
+    return $palettes;
 }
 
 function save_palettes(array $palettes): bool

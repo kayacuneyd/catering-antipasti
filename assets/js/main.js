@@ -1,33 +1,55 @@
 // Palette definitions for dynamic theme switching
-var COLOR_PALETTES = {
+var COLOR_PALETTES = window.COLOR_PALETTES || {
     classic: {
+        olive: '#6C1F2B',
+        sangiovese: '#6C1F2B',
+        verona: '#F5E6D3',
+        terracotta: '#E8B944',
+        seagray: '#7A8C8E',
+        vineyard: '#6C1F2B',
+        cream: '#FFFFFF'
+    },
+    toscana: {
         olive: '#5C4A3C',
         sangiovese: '#D4704A',
         verona: '#F5E6D3',
         terracotta: '#E8B944',
         seagray: '#7A8C8E',
         vineyard: '#3A5A40',
-        cream: '#F5E6D3'
+        cream: '#FFFFFF'
     },
-    tuscan: {
-        olive: '#4A3B2B',
-        sangiovese: '#B8402A',
-        verona: '#F7E3C8',
-        terracotta: '#D79B49',
-        seagray: '#8A9A9C',
-        vineyard: '#2F5233',
-        cream: '#FCF1E1'
-    },
-    coastal: {
-        olive: '#2E4A62',
-        sangiovese: '#D94F70',
-        verona: '#EFF6F9',
-        terracotta: '#F2AF29',
+    amalfi: {
+        olive: '#023E8A',
+        sangiovese: '#0077B6',
+        verona: '#FFFFFF',
+        terracotta: '#FFD60A',
         seagray: '#4D7D8C',
-        vineyard: '#1E3F2F',
-        cream: '#F9FBF2'
+        vineyard: '#023E8A',
+        cream: '#F5FBFF'
+    },
+    sicilia: {
+        olive: '#1E3A8A',
+        sangiovese: '#FB923C',
+        verona: '#FEFCE8',
+        terracotta: '#DC2626',
+        seagray: '#4B5563',
+        vineyard: '#6B21A8',
+        cream: '#FFFFFF'
+    },
+    venezia: {
+        olive: '#1F2937',
+        sangiovese: '#F59E0B',
+        verona: '#FEF3C7',
+        terracotta: '#991B1B',
+        seagray: '#4B5563',
+        vineyard: '#1F2937',
+        cream: '#FFF8E1'
     }
 };
+
+if (!window.COLOR_PALETTES) {
+    window.COLOR_PALETTES = COLOR_PALETTES;
+}
 
 function hexToRgbTriplet(hex) {
     var normalized = hex.replace('#', '');
@@ -72,7 +94,7 @@ function applyColorPalette(name, persist) {
 }
 
 function initColorPalette() {
-    var preferred = document.documentElement.dataset.paletteDefault || null;
+    var preferred = document.documentElement.dataset.paletteDefault || window.ACTIVE_PALETTE || null;
     var stored = null;
 
     try {

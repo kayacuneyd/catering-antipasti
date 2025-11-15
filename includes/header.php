@@ -56,6 +56,28 @@ if ($is_english) {
     ];
 }
 
+$frontend_palettes = array_filter(site_color_palettes(), 'is_array');
+$active_palette_name = site_active_palette_name();
+$active_palette_colors = site_active_palette_colors();
+
+if (!defined('SITE_PALETTE_EMITTED')) {
+    $css_variables = [];
+    foreach ($active_palette_colors as $token => $hex) {
+        $css_variables[] = '--color-' . $token . ': ' . hex_to_rgb_triplet($hex) . ';';
+    }
+
+    echo '<style id="site-palette-vars">:root{' . implode('', $css_variables) . '}</style>';
+    echo '<script id="site-palette-data">';
+    $jsonFlags = JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT;
+    $paletteJson = json_encode($frontend_palettes, $jsonFlags);
+    $activeJson = json_encode($active_palette_name, $jsonFlags);
+    echo 'window.COLOR_PALETTES = ' . $paletteJson . ';';
+    echo 'document.documentElement.dataset.paletteDefault = ' . $activeJson . ';';
+    echo 'window.ACTIVE_PALETTE = ' . $activeJson . ';';
+    echo '</script>';
+    define('SITE_PALETTE_EMITTED', true);
+}
+
 ?>
 <header class="bg-white shadow-md sticky top-0 z-50">
     <nav class="container mx-auto px-4 py-4 max-w-7xl">

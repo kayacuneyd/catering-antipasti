@@ -27,6 +27,7 @@ if (!empty($settings_data['logo_path'])) {
     $logo_public_path = '/' . ltrim($settings_data['logo_path'], '/');
 }
 define('SITE_LOGO', $logo_public_path);
+require_once __DIR__ . '/palette-defaults.php';
 
 $current_page = basename($_SERVER['PHP_SELF']);
 $is_english = strpos($_SERVER['REQUEST_URI'], '/en/') !== false;
@@ -161,4 +162,82 @@ function render_page_hero(array $options = []): void
 
     echo '</div>';
     echo '</section>';
+}
+
+function site_color_palettes(): array
+{
+    static $palettes = null;
+    if ($palettes !== null) {
+        return $palettes;
+    }
+
+    $defaults = palette_default_presets();
+    $base = array_merge(['active' => 'classic'], $defaults);
+    $path = dirname(__DIR__) . '/data/palettes.json';
+    $stored = [];
+    if (is_readable($path)) {
+        $decoded = json_decode(file_get_contents($path), true);
+        if (is_array($decoded)) {
+            $stored = $decoded;
+        }
+    }
+
+    $merged = array_merge($base, $stored);
+    foreach ($defaults as $name => $colors) {
+        if (isset($merged[$name]) && is_array($merged[$name])) {
+            $merged[$name] = array_merge($colors, $merged[$name]);
+        } else {
+            $merged[$name] = $colors;
+        }
+    }
+
+    $palettes = $merged;
+    return $palettes;
+}
+
+function site_active_palette_name(): string
+{
+    static $name = null;
+    if ($name !== null) {
+        return $name;
+    }
+
+    global $settings_data;
+    $palettes = site_color_palettes();
+    $candidate = $settings_data['active_palette'] ?? ($palettes['active'] ?? 'classic');
+    if (!isset($palettes[$candidate])) {
+        $candidate = 'classic';
+    }
+
+    $name = $candidate;
+    return $name;
+}
+
+function site_active_palette_colors(): array
+{
+    $palettes = site_color_palettes();
+    $active = site_active_palette_name();
+    if (isset($palettes[$active]) && is_array($palettes[$active])) {
+        return $palettes[$active];
+    }
+
+    $defaults = palette_default_presets();
+    return $defaults['classic'] ?? [];
+}
+
+function hex_to_rgb_triplet(string $hex): string
+{
+    $normalized = ltrim($hex, '#');
+    if (strlen($normalized) === 3) {
+        $normalized = $normalized[0] . $normalized[0]
+            . $normalized[1] . $normalized[1]
+            . $normalized[2] . $normalized[2];
+    }
+
+    $int = hexdec($normalized);
+    $r = ($int >> 16) & 0xFF;
+    $g = ($int >> 8) & 0xFF;
+    $b = $int & 0xFF;
+
+    return $r . ' ' . $g . ' ' . $b;
 }
