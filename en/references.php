@@ -159,8 +159,8 @@ $testimonials = $references['testimonials'] ?? [];
 
     <section class="py-16">
         <div class="container mx-auto px-4 max-w-4xl">
-            <div class="rounded-3xl bg-vineyard/30 text-cream p-10 text-center shadow-xl">
-                <h3 class="font-serif text-3xl mb-4">Ready for a similar result?</h3>
+            <div class="rounded-3xl text-cream p-10 text-center shadow-xl bg-vineyard/30">
+                <h3 class="font-serif text-3xl mb-4 text-cream">Ready for a similar result?</h3>
                 <p class="text-xl mb-8">We build brand-aligned catering concepts for corporate events, weddings and launches.</p>
                 <div class="flex flex-col gap-3 sm:flex-row sm:justify-center">
                     <a href="contact.php" class="bg-white text-olive px-8 py-4 rounded-lg font-semibold">Contact us</a>
