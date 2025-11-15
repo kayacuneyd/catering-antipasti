@@ -37,8 +37,8 @@ $page_title = 'Blog Yönetimi';
 
 <div class="mt-6 grid gap-6">
     <?php foreach ($posts as $index => $post): ?>
-        <div class="rounded-2xl bg-white p-6 shadow flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-            <div>
+        <div class="rounded-2xl bg-white p-6 shadow flex flex-col gap-4 md:flex-row md:items-stretch md:justify-between">
+            <div class="flex-1">
                 <p class="text-xs uppercase tracking-widest text-gray-400"><?= htmlspecialchars($post['category'] ?? 'Kategori') ?></p>
                 <h3 class="text-2xl font-bold text-gray-900"><?= htmlspecialchars($post['title'] ?? '') ?></h3>
                 <p class="text-sm text-gray-500 mt-1">Yayın: <?= htmlspecialchars($post['date'] ?? '') ?></p>
@@ -53,14 +53,19 @@ $page_title = 'Blog Yönetimi';
                     </div>
                 <?php endif; ?>
             </div>
-            <div class="flex gap-3">
-                <a href="blog-edit.php?lang=<?= $lang ?>&index=<?= $index ?>" class="rounded-lg border border-gray-200 px-4 py-2 font-semibold text-gray-700">Düzenle</a>
-                <form method="POST" action="blog-delete.php" onsubmit="return confirm('Bu yazıyı silmek istediğinize emin misiniz?');">
-                    <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
-                    <input type="hidden" name="lang" value="<?= $lang ?>">
-                    <input type="hidden" name="index" value="<?= $index ?>">
-                    <button class="rounded-lg bg-red-50 px-4 py-2 font-semibold text-red-700">Sil</button>
-                </form>
+            <div class="flex flex-col gap-3 items-end">
+                <?php if (!empty($post['image'])): ?>
+                    <img src="<?= htmlspecialchars($post['image']) ?>" alt="" class="rounded-xl border w-36 h-32 object-cover">
+                <?php endif; ?>
+                <div class="flex gap-3">
+                    <a href="blog-edit.php?lang=<?= $lang ?>&index=<?= $index ?>" class="rounded-lg border border-gray-200 px-4 py-2 font-semibold text-gray-700">Düzenle</a>
+                    <form method="POST" action="blog-delete.php" onsubmit="return confirm('Bu yazıyı silmek istediğinize emin misiniz?');">
+                        <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
+                        <input type="hidden" name="lang" value="<?= $lang ?>">
+                        <input type="hidden" name="index" value="<?= $index ?>">
+                        <button class="rounded-lg bg-red-50 px-4 py-2 font-semibold text-red-700">Sil</button>
+                    </form>
+                </div>
             </div>
         </div>
     <?php endforeach; ?>

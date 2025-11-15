@@ -85,6 +85,18 @@ $related = array_values(array_filter(blog_posts(), function ($item) use ($post) 
     <?php endif; ?>
 
     <?php if ($post): ?>
+        <?php if (!empty($post['image'])): ?>
+            <section class="bg-white">
+                <div class="container mx-auto px-4 max-w-4xl">
+                    <div class="overflow-hidden rounded-3xl shadow-lg">
+                        <img src="<?php echo htmlspecialchars($post['image'], ENT_QUOTES, 'UTF-8'); ?>"
+                             alt="<?php echo htmlspecialchars($post['image_alt'] ?? $post['title'], ENT_QUOTES, 'UTF-8'); ?>"
+                             class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </section>
+        <?php endif; ?>
+
         <section class="py-16">
             <div class="container mx-auto px-4 max-w-4xl">
                 <article class="prose max-w-none text-lg leading-relaxed">

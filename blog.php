@@ -51,7 +51,16 @@ $posts = blog_posts();
         <div class="container mx-auto px-4 max-w-5xl">
             <div class="grid gap-8 md:grid-cols-2">
                 <?php foreach ($posts as $post): ?>
-                    <article class="bg-white rounded-2xl shadow-lg p-8 flex flex-col">
+                    <article class="bg-white rounded-2xl shadow-lg p-0 flex flex-col overflow-hidden">
+                        <?php if (!empty($post['image'])): ?>
+                            <div class="relative aspect-[4/3] w-full overflow-hidden">
+                                <img src="<?php echo htmlspecialchars($post['image'], ENT_QUOTES, 'UTF-8'); ?>"
+                                     alt="<?php echo htmlspecialchars($post['image_alt'] ?? $post['title'], ENT_QUOTES, 'UTF-8'); ?>"
+                                     loading="lazy"
+                                     class="h-full w-full object-cover">
+                            </div>
+                        <?php endif; ?>
+                        <div class="p-8 flex flex-col flex-1">
                         <div class="flex items-center justify-between text-sm text-seagray mb-4">
                             <span class="uppercase tracking-wide text-xs text-sangiovese">
                                 <?php echo htmlspecialchars($post['category'], ENT_QUOTES, 'UTF-8'); ?>
@@ -78,6 +87,7 @@ $posts = blog_posts();
                             Zum Artikel
                             <span aria-hidden="true">→</span>
                         </a>
+                        </div>
                     </article>
                 <?php endforeach; ?>
             </div>

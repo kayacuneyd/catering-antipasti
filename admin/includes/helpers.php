@@ -277,3 +277,90 @@ function handle_upload(string $field, array $allowedExtensions, int $maxSizeMb =
 
     return ['success' => true, 'tmp_path' => $file['tmp_name'], 'target_name' => $targetName];
 }
+
+function save_optimized_image(string $tmpPath, string $targetPath, int $maxWidth = 1600, int $maxHeight = 1200): bool
+{
+    $info = @getimagesize($tmpPath);
+    if (!$info) {
+        return false;
+    }
+
+    [$width, $height] = $info;
+    $mime = $info['mime'] ?? '';
+    switch ($mime) {
+        case 'image/jpeg':
+            $source = imagecreatefromjpeg($tmpPath);
+            $type = 'jpeg';
+            break;
+        case 'image/png':
+            $source = imagecreatefrompng($tmpPath);
+            $type = 'png';
+            break;
+        case 'image/gif':
+            $source = imagecreatefromgif($tmpPath);
+            $type = 'gif';
+            break;
+        case 'image/webp':
+            if (!function_exists('imagecreatefromwebp')) {
+                return false;
+            }
+            $source = imagecreatefromwebp($tmpPath);
+            $type = 'webp';
+            break;
+        default:
+            return false;
+    }
+
+    if (!$source) {
+        return false;
+    }
+
+    $ratio = min($maxWidth / max(1, $width), $maxHeight / max(1, $height), 1);
+    $newWidth = (int) max(1, round($width * $ratio));
+    $newHeight = (int) max(1, round($height * $ratio));
+
+    $canvas = imagecreatetruecolor($newWidth, $newHeight);
+
+    if (in_array($type, ['png', 'gif', 'webp'], true)) {
+        imagecolortransparent($canvas, imagecolorallocatealpha($canvas, 0, 0, 0, 127));
+        imagealphablending($canvas, false);
+        imagesavealpha($canvas, true);
+    }
+
+    imagecopyresampled($canvas, $source, 0, 0, 0, 0, $newWidth, $newHeight, $width, $height);
+
+    $result = false;
+    switch ($type) {
+        case 'jpeg':
+            $result = imagejpeg($canvas, $targetPath, 82);
+            break;
+        case 'png':
+            $result = imagepng($canvas, $targetPath, 6);
+            break;
+        case 'gif':
+            $result = imagegif($canvas, $targetPath);
+            break;
+        case 'webp':
+            if (function_exists('imagewebp')) {
+                $result = imagewebp($canvas, $targetPath, 80);
+            }
+            break;
+    }
+
+    imagedestroy($source);
+    imagedestroy($canvas);
+
+    return $result;
+}
+
+function delete_uploaded_file(?string $relativePath): void
+{
+    if (!$relativePath) {
+        return;
+    }
+
+    $fullPath = admin_path($relativePath);
+    if (is_file($fullPath)) {
+        @unlink($fullPath);
+    }
+}

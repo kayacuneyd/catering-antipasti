@@ -16,6 +16,10 @@ $index = (int) ($_POST['index'] ?? -1);
 
 $blog = read_json_file('data/blog-posts.json', []);
 if (isset($blog[$lang][$index])) {
+    $imagePath = $blog[$lang][$index]['image'] ?? '';
+    if ($imagePath) {
+        delete_uploaded_file($imagePath);
+    }
     array_splice($blog[$lang], $index, 1);
     write_json_file('data/blog-posts.json', $blog);
     log_activity('blog:delete', (string) $index);

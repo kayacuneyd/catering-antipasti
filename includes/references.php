@@ -22,7 +22,7 @@ function get_default_references_data(): array
                     'title' => 'Sommerhochzeit im Maison Palmengarten',
                     'location' => 'Kornwestheim',
                     'description' => 'Aperitivo-Station, Pasta-Manufaktur und Dessertinseln unter freiem Himmel.',
-                    'image' => 'https://images.unsplash.com/photo-1520854223477-858bda993f53?auto=format&fit=crop&w=1200&q=80',
+                    'image' => 'https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=1200&q=80',
                     'tags' => ['Wedding', 'Aperitivo'],
                 ],
                 [
@@ -87,7 +87,7 @@ function get_default_references_data(): array
                     'title' => 'Summer wedding at Maison Palmengarten',
                     'location' => 'Kornwestheim',
                     'description' => 'Aperitivo station, pasta atelier and dessert islands under the stars.',
-                    'image' => 'https://images.unsplash.com/photo-1520854223477-858bda993f53?auto=format&fit=crop&w=1200&q=80',
+                    'image' => 'https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=1200&q=80',
                     'tags' => ['Wedding', 'Aperitivo'],
                 ],
                 [

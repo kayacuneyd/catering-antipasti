@@ -57,11 +57,11 @@
                 <h2 class="font-serif text-3xl text-sangiovese mt-8 mb-4">
                     What we promise
                 </h2>
-                <ul class="space-y-3">
-                    <li>✓ Authentic Italian recipes with seasonal produce</li>
-                    <li>✓ Personal service from Chef Hasan</li>
-                    <li>✓ Flexible menus for 20 to 1000 guests</li>
-                    <li>✓ Quote within 48 hours</li>
+                <ul class="space-y-3 list-none">
+                    <li>Authentic Italian recipes with seasonal produce</li>
+                    <li>Personal service from Chef Hasan</li>
+                    <li>Flexible menus for 20 to 1000 guests</li>
+                    <li>Quote within 48 hours</li>
                 </ul>
 
                 <div class="mt-10">

@@ -37,18 +37,15 @@ require_once __DIR__ . '/../includes/menus.php';
 <?php include __DIR__ . '/../includes/header.php'; ?>
 
 <main>
-    <section class="py-20 bg-white">
+    <?php
+    render_page_hero([
+        'eyebrow' => 'Menus',
+        'title' => 'Our Menus',
+        'description' => 'Choose from chef-curated experiences or combine individual favourites. Every arrangement stays flexible until we finalise it together.',
+    ]);
+    ?>
+    <section class="py-16 bg-verona/40">
         <div class="container mx-auto px-4 max-w-5xl">
-            <div class="max-w-3xl mx-auto text-center mb-12">
-                <h1 class="font-serif text-5xl text-olive mb-6">
-                    Our menus
-                </h1>
-                <p class="text-lg text-seagray">
-                    Choose from chef-curated experiences or combine individual courses.
-                    Everything can be tailored to your guest profile and occasion.
-                </p>
-            </div>
-
             <div class="flex justify-center gap-4 mb-12">
                 <button type="button"
                         onclick="showMenuType('preset')"
@@ -67,7 +64,7 @@ require_once __DIR__ . '/../includes/menus.php';
             <div id="preset-menus" class="menu-section">
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
                     <?php foreach ($preset_menus as $menu): ?>
-                        <div class="bg-verona p-8 rounded-lg shadow-lg flex flex-col gap-6">
+                        <div class="bg-white p-8 rounded-lg shadow-lg flex flex-col gap-6">
                             <div>
                                 <h3 class="font-serif text-2xl text-sangiovese mb-2">
                                     <?php echo htmlspecialchars($menu['name'], ENT_QUOTES, 'UTF-8'); ?>

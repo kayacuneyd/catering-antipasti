@@ -17,7 +17,7 @@ $page_title = 'Blog Yazısını Düzenle';
 <?php include __DIR__ . '/includes/header.php'; ?>
 
 <div class="rounded-2xl bg-white p-6 shadow">
-    <form method="POST" action="blog-save.php" class="space-y-6">
+    <form method="POST" action="blog-save.php" class="space-y-6" enctype="multipart/form-data">
         <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
         <input type="hidden" name="action" value="update">
         <input type="hidden" name="lang" value="<?= htmlspecialchars($lang) ?>">
@@ -66,6 +66,29 @@ $page_title = 'Blog Yazısını Düzenle';
         <div>
             <label class="text-sm font-semibold text-gray-600">Etiketler</label>
             <input type="text" name="tags" class="mt-1 w-full rounded-lg border border-gray-300 px-4 py-3" value="<?= htmlspecialchars(implode(', ', $post['tags'] ?? [])) ?>">
+        </div>
+
+        <div class="grid gap-4 md:grid-cols-2">
+            <div>
+                <label class="text-sm font-semibold text-gray-600">Kapak Görseli</label>
+                <input type="file" name="featured_image" accept="image/jpeg,image/png,image/webp,image/gif"
+                       class="mt-1 w-full rounded-lg border border-gray-300 px-4 py-2 bg-white">
+                <p class="text-xs text-gray-400 mt-2">Yeni bir görsel yüklerseniz mevcut olanın yerini alır.</p>
+                <?php if (!empty($post['image'])): ?>
+                    <div class="mt-4">
+                        <img src="<?= htmlspecialchars($post['image']) ?>" alt="" class="rounded-xl border w-full max-h-52 object-cover">
+                        <label class="mt-3 flex items-center gap-2 text-sm text-gray-600">
+                            <input type="checkbox" name="image_remove" value="1">
+                            <span>Mevcut görseli kaldır</span>
+                        </label>
+                    </div>
+                <?php endif; ?>
+            </div>
+            <div>
+                <label class="text-sm font-semibold text-gray-600">Görsel Alternatif Metni</label>
+                <input type="text" name="image_alt" class="mt-1 w-full rounded-lg border border-gray-300 px-4 py-3"
+                       value="<?= htmlspecialchars($post['image_alt'] ?? '') ?>" placeholder="Örn. Flying buffet setup">
+            </div>
         </div>
 
         <button class="w-full rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 py-3 text-lg font-semibold text-white">Güncelle</button>
