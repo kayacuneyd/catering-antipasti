@@ -91,7 +91,7 @@
         </div>
     </section>
 
-    <section class="py-16 bg-white">
+    <section class="py-16">
         <div class="container mx-auto px-4 max-w-6xl">
             <div class="text-center max-w-2xl mx-auto mb-12">
                 <p class="uppercase tracking-[0.4em] text-xs text-seagray">Timeline</p>
