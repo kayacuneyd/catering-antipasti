@@ -1,23 +1,23 @@
-name: Deploy to Hetzner via SFTP
+name: Deploy to Hetzner via FTPS
 on:
   push:
-    branches:
-      - master
+    branches: ["master"]
 
 jobs:
   ftp-deploy:
+    name: FTP Deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: SFTP Deploy
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
-          username: ${{ secrets.HETZNER_FTP_USER }}
-          server: ${{ secrets.HETZNER_FTP_HOST }}
-          port: 2
-          local_path: "./"
-          remote_path: "/public_html/"
-          password: ${{ secrets.HETZNER_FTP_PASS }}
-          sftp_only: true
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
+          protocol: ftps
+          port: 21
+          local-dir: "./"
+          server-dir: "public_html/"
