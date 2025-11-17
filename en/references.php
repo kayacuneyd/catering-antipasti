@@ -37,6 +37,7 @@ $testimonials = $references['testimonials'] ?? [];
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/custom.css">
+    <?php include __DIR__ . '/../includes/site-icon.php'; ?>
 </head>
 <body class="font-sans text-olive bg-verona">
 <?php include __DIR__ . '/../includes/header.php'; ?>
