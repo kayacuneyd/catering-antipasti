@@ -56,6 +56,7 @@ WhatsApp buttons are powered by the helper in `assets/js/main.js`. Update the ph
 - [ ] Review DE/EN links and language switcher.
 - [ ] Verify logs directory permissions (`logs/inquiries.log` writable).
 - [ ] Test responsive behaviour on common devices.
+- [ ] Hetzner ftp connection
 
 ## Maintenance
 
