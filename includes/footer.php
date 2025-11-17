@@ -56,7 +56,7 @@ if ($footer_logo !== '') {
             </div>
         </div>
         <div class="border-t border-white/20 pt-6 text-center text-white/90 text-sm">
-            <p class="text-xl"><?php echo t('footer_copyright'); ?></p>
+            <p class="text-xl"><?php echo '© ' . date('Y') . ' ' . t('footer_copyright'); ?></p>
             <p class="mt-2 text-xs text-white/80">
                 Built by <a href="https://kayacuneyt.com" target="_blank" rel="noopener" class="underline">Cüneyt Kaya</a> in Kornwestheim
             </p>
