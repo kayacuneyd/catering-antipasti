@@ -15,9 +15,9 @@ jobs:
       - name: Deploy to Hetzner (FTPS)
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_PASS }}
+          server: ${{ secrets.HETZNER_FTP_HOST }}
+          username: ${{ secrets.HETZNER_FTP_USER }}
+          password: ${{ secrets.HETZNER_FTP_PASS }}
           protocol: ftps
           port: 21
           local-dir: ./
