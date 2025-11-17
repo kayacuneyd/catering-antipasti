@@ -2,7 +2,7 @@ name: Deploy to Hetzner via SFTP
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   ftp-deploy:
@@ -16,7 +16,7 @@ jobs:
         with:
           username: ${{ secrets.HETZNER_FTP_USER }}
           server: ${{ secrets.HETZNER_FTP_HOST }}
-          port: 22
+          port: 2
           local_path: "./"
           remote_path: "/public_html/"
           password: ${{ secrets.HETZNER_FTP_PASS }}
