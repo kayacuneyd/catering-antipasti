@@ -1,17 +1,18 @@
 name: Deploy to Hetzner via FTPS
 on:
   push:
-    branches: ["master"]
+    branches:
+      - main
 
 jobs:
   ftp-deploy:
-    name: FTP Deploy
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: FTP Deploy
+      - name: Deploy to Hetzner (FTPS)
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
           server: ${{ secrets.FTP_HOST }}
@@ -19,5 +20,6 @@ jobs:
           password: ${{ secrets.FTP_PASS }}
           protocol: ftps
           port: 21
-          local-dir: "./"
-          server-dir: "public_html/"
+          local-dir: ./
+          server-dir: public_html/
+          timeout: 60000
